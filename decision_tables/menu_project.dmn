@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1iepzp6" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.20.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.4.0">
+  <decision id="Decision_0fpvo2x" name="Menu Recommendation">
+    <informationRequirement id="InformationRequirement_0n8jh1a">
+      <requiredDecision href="#Decision_03b557o" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_17rqqxr">
+      <requiredDecision href="#Decision_04c3w9s" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_17nkehc">
+      <requiredDecision href="#Decision_1hck4st" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0c9qwy7">
+      <input id="InputClause_133o4f1" label="Dish" biodi:width="175">
+        <inputExpression id="LiteralExpression_0gpnu9x" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0jvmyoo" label="Lactose Friendly" biodi:width="150">
+        <inputExpression id="LiteralExpression_08rxrb2" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0xfpi9w">
+          <text>"yes","no"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1il3pv7" label="Gluten Friendly" biodi:width="150">
+        <inputExpression id="LiteralExpression_0kuh9ju" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1nzl5hr">
+          <text>"yes","no"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1y4up30" label="Vegetarian Friendly" biodi:width="161">
+        <inputExpression id="LiteralExpression_1p4e0e4" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_04jmyh6">
+          <text>"yes","no"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_03m6vwc" label="Calorie Conscious">
+        <inputExpression id="LiteralExpression_0wr03b3" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1jstal7">
+          <text>"yes","no"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_1jygfci" label="Client recommendation" name="Low caloric serving" typeRef="string" biodi:width="409">
+        <outputValues id="UnaryTests_19fvax9">
+          <text></text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_0oa5518">
+        <inputEntry id="UnaryTests_0qgq049">
+          <text>"Bruschetta"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ifte2f">
+          <text>"yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1btfzis">
+          <text>"no"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tdiroa">
+          <text>"yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13gcbrt">
+          <text>"yes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_125374f">
+          <text>["Vegetarian", "Lactose intollerant", "calorie-conscious"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17odk4r">
+        <inputEntry id="UnaryTests_1sk9ee5">
+          <text>"Grilled Salmon"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14zw55z">
+          <text>"yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sikv8s">
+          <text>"yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o42wv1">
+          <text>"no"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vi091e">
+          <text>"yes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18awnb5">
+          <text>["Lactose intollerant", "gluten intollerant", "calorie-conscious"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cz9jjx">
+        <inputEntry id="UnaryTests_0bg1mu2">
+          <text>"Eggplant Parmesan"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xml0ea">
+          <text>"no"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ipymy0">
+          <text>"no"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0py1eic">
+          <text>"yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ox5g6w">
+          <text>"no"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1s9tsrs">
+          <text>["Vegetarian"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16nuwo5">
+        <inputEntry id="UnaryTests_0okd9z9">
+          <text>"Caprese Salad"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eg8qdq">
+          <text>"no"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o1cv2w">
+          <text>"yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mzgvi3">
+          <text>"yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nw5yc0">
+          <text>"yes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hnhg5m">
+          <text>["gluten intollerant", "vegetarian", "valorie-conscious"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t0c2wm">
+        <inputEntry id="UnaryTests_02vhnw5">
+          <text>"Garlic Bread"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0da6u5r">
+          <text>"no"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xqut0d">
+          <text>"no"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d7ihy1">
+          <text>"yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mudpus">
+          <text>"yes"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1u0ni46">
+          <text>["vegetarian", "calorie-conscious"]</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_04c3w9s" name="Food type validation">
+    <decisionTable id="DecisionTable_1itkav2">
+      <input id="InputClause_0f1v3uz" label="Dish">
+        <inputExpression id="LiteralExpression_16qyk90" typeRef="string" />
+      </input>
+      <input id="InputClause_09e0yz5" label="Contains Meat" biodi:width="273">
+        <inputExpression id="LiteralExpression_1hu2jlw" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_182zc0y" label="Vegetarian Friendly" typeRef="string">
+        <outputValues id="UnaryTests_1onoatv">
+          <text>"yes","no"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1o6vvnm">
+        <inputEntry id="UnaryTests_1tbje3k">
+          <text>"Bruschetta"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qiwa8y">
+          <text>"no"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0m1tykz">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gf18nm">
+        <inputEntry id="UnaryTests_0x3gjk7">
+          <text>"Grilled Salmon"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05bdk04">
+          <text>"Salmon fillet"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jb65k5">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0deop8h">
+        <inputEntry id="UnaryTests_1mv52hm">
+          <text>"Eggplant Parmesan"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hqmrzt">
+          <text>"no"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0augulo">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rohdzw">
+        <inputEntry id="UnaryTests_0fhjv5y">
+          <text>"Caprese Salad"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mrj9sz">
+          <text>"no"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q46ldw">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0pcp50l">
+        <inputEntry id="UnaryTests_105y81p">
+          <text>"Garlic Bread"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16f1cq6">
+          <text>"no"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gf3yyz">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_03b557o" name="Allergy validation">
+    <decisionTable id="DecisionTable_1tok5uq">
+      <input id="InputClause_0hwlcx4" label="Dish">
+        <inputExpression id="LiteralExpression_0cksmjl" typeRef="string" />
+      </input>
+      <input id="InputClause_0xwowt1" label="Contains Gluten" biodi:width="307">
+        <inputExpression id="LiteralExpression_0fbbt08" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1hsotme">
+          <text></text>
+        </inputValues>
+      </input>
+      <input id="InputClause_1t1f1gm" label="Contains Lactose" biodi:width="306">
+        <inputExpression id="LiteralExpression_1ra3c43" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1c85p1m">
+          <text></text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_1juqxcf" label="Lactose Friendly" typeRef="string" biodi:width="150">
+        <outputValues id="UnaryTests_19r15j9">
+          <text>"yes","no"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_15lj7e2" label="Gluten Friendly" typeRef="string" biodi:width="150">
+        <outputValues id="UnaryTests_1s1jlaw">
+          <text>"yes","no"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_05j7sdp">
+        <inputEntry id="UnaryTests_082u4cs">
+          <text>"Bruschetta"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ky1i4t">
+          <text>"Toasted bread"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bfzb0a">
+          <text>"no"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mtx3gr">
+          <text>"yes"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b0fn20">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0e2i4yu">
+        <inputEntry id="UnaryTests_1x02fnn">
+          <text>"Caprese Salad"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pshk2y">
+          <text>"no"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fofzp9">
+          <text>"mozzarella"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mnj7ht">
+          <text>"no"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e7fgd0">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t1ods5">
+        <inputEntry id="UnaryTests_0h9hozw">
+          <text>"Garlic Bread"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0px9ayg">
+          <text>"bread"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ovsqpt">
+          <text>"butter"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1sairjj">
+          <text>"no"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06hyh3e">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1opq9kr">
+        <inputEntry id="UnaryTests_1qnb4be">
+          <text>"Grilled Salmon"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t00960">
+          <text>"no"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05qikdk">
+          <text>"no"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09cfaiv">
+          <text>"yes"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dqeq1b">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1q24xpv">
+        <inputEntry id="UnaryTests_1sur4dw">
+          <text>"Eggplant Parmesan"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kfvkna">
+          <text>"mozzarella"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1psynnb">
+          <text>"spaghetti"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pq5mk5">
+          <text>"no"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vujnrn">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_1hck4st" name="Calorie Validation">
+    <decisionTable id="DecisionTable_1vj4y8s">
+      <input id="InputClause_1taqi2k" label="Dish" biodi:width="205">
+        <inputExpression id="LiteralExpression_0kxbpxy" typeRef="string" />
+      </input>
+      <input id="InputClause_07xom7f" label="Calorie limit">
+        <inputExpression id="LiteralExpression_1vek2ka" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0xwf8hg" label="Calorie-conscious" typeRef="string">
+        <outputValues id="UnaryTests_0e5oosk">
+          <text>"yes","no"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1e6cdu4">
+        <inputEntry id="UnaryTests_0wowo0x">
+          <text>"Grilled Salmon"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t68gm6">
+          <text>&lt;=550</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ndle7e">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1609dvx">
+        <inputEntry id="UnaryTests_0si0bj0">
+          <text>"Eggplant Parmesan"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vojg1f">
+          <text>&gt;550</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0idjdzj">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0oe5u0c">
+        <inputEntry id="UnaryTests_03zizdb">
+          <text>"Bruschetta"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l95trv">
+          <text>&lt;=550</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0uvopbg">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_145kyp5">
+        <inputEntry id="UnaryTests_0kg3nph">
+          <text>"Caprese Salad"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hi04my">
+          <text>&lt;=550</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1eh2zk7">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1e3at4n">
+        <inputEntry id="UnaryTests_0k0xmiq">
+          <text>"Garlic Bread"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_104tnf2">
+          <text>&lt;=550</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hw59sn">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14nfj17">
+        <inputEntry id="UnaryTests_1v88cgu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16gmgpf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tjy62l">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_0574wku" name="Menu recommendation 2">
+    <decisionTable id="DecisionTable_1qdamk5">
+      <input id="InputClause_1vsmu3n" label="Guest Preference">
+        <inputExpression id="LiteralExpression_1ut0eg3" typeRef="string" />
+        <inputValues id="UnaryTests_0rhw7hg">
+          <text>"Carnivore","Vegetarian"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_086eo5z" label="Guest Allergies" biodi:width="344">
+        <inputExpression id="LiteralExpression_0amhc21" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_14pif6l">
+          <text>"lactose-intollerant","Gluten-Free"</text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0wr554z" label="Guest caloric intake" biodi:width="199">
+        <inputExpression id="LiteralExpression_0m90lq6" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1bbokzk">
+          <text>"Calorie-conscious","none","High-Calorie"</text>
+        </inputValues>
+      </input>
+      <output id="OutputClause_1fwq4fr" label="Recommended Dishes" typeRef="string" biodi:width="666" />
+      <rule id="DecisionRule_1vbef2u">
+        <inputEntry id="UnaryTests_1uxgibu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u2eqjw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14zz08t">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vj6day">
+          <text>["Grilled Salmon", "Stuffed Bell Peppers", "Chicken Piccata", "Fruit Salad", "Gluten-Free Fusilli Primavera"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cdd54j">
+        <inputEntry id="UnaryTests_1o32dyk">
+          <text>"Vegetarian"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_142g93i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09uitzo">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15jgodc">
+          <text>["Fettuccine Alfredo", "Margherita Pizza", "Vegetarian Pizza", "Eggplant Parmesan"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r70via">
+        <inputEntry id="UnaryTests_0j6h7dv">
+          <text>"Vegetarian"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13z30mf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f3xgbi">
+          <text>"Calorie-conscious"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1p61971">
+          <text>["Garlic Bread", "Tiramisu", "Cannoli", "Gelato", "Panna Cotta"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cwzhrq">
+        <inputEntry id="UnaryTests_0d93s6r">
+          <text>"Vegetarian"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19rfm6e">
+          <text>"lactose-intollerant"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nxtkfy">
+          <text>"Calorie-conscious"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02ipwjw">
+          <text>["Bruschetta", "Stuffed Mushrooms", "Spaghetti Carbonara", "Penne Arrabbiata", "Spaghetti aglio e Olio", "Pepperoni Pizza", "Prosciutto e Arugula Pizza", "Chicken Parmesan"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03j2iv4">
+        <inputEntry id="UnaryTests_1jjrfgg">
+          <text>"Vegetarian"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01qpjas">
+          <text>"Gluten-Free"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r6sdp4">
+          <text>"Calorie-conscious"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wn5uv7">
+          <text>["Caprese Salad"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1nvvq4c">
+        <inputEntry id="UnaryTests_0po01k8">
+          <text>"Carnivore"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nujkyq">
+          <text>["lactose-intollerant","Gluten-Free"]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qonfca">
+          <text>"Calorie-conscious"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1szpmbq">
+          <text>["Antipasto Platter"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xwpgv2">
+        <inputEntry id="UnaryTests_1x583y7">
+          <text>"Vegetarian"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_011fyfr">
+          <text>"Gluten-Free"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qehta7">
+          <text>"none"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_164spah">
+          <text>["Gluten-Free Pizza Bianca"]</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape id="DMNShape_1vmmzd3" dmnElementRef="Decision_0fpvo2x">
+        <dc:Bounds height="80" width="180" x="430" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1up30mv" dmnElementRef="Decision_04c3w9s">
+        <dc:Bounds height="80" width="180" x="430" y="240" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1jns7cu" dmnElementRef="Decision_03b557o">
+        <dc:Bounds height="80" width="180" x="160" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0f9qo8x" dmnElementRef="InformationRequirement_0n8jh1a">
+        <di:waypoint x="340" y="120" />
+        <di:waypoint x="410" y="120" />
+        <di:waypoint x="430" y="120" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_19ekmtu" dmnElementRef="InformationRequirement_17rqqxr">
+        <di:waypoint x="520" y="240" />
+        <di:waypoint x="520" y="180" />
+        <di:waypoint x="520" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1sfo8jw" dmnElementRef="InformationRequirement_17nkehc">
+        <di:waypoint x="730" y="120" />
+        <di:waypoint x="630" y="120" />
+        <di:waypoint x="610" y="120" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_05rv53m" dmnElementRef="Decision_1hck4st">
+        <dc:Bounds height="80" width="180" x="730" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0pf42vu" dmnElementRef="Decision_0574wku">
+        <dc:Bounds height="80" width="180" x="1070" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
