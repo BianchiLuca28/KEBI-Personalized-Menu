@@ -1,0 +1,104 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+### Shape for Guest
+
+:GuestShape a sh:NodeShape ;
+    sh:targetClass :Guest ;
+    sh:property [
+        sh:path :GuestHasFoodType ;
+        sh:node :GuestFoodPreferenceShape ;
+        sh:minCount 0 ;
+    ] .
+
+### Shape for GuestFoodPreference
+
+:GuestFoodPreferenceShape a sh:NodeShape ;
+    sh:targetClass :GuestFoodPreference ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:in (:GuestFoodTypePreference :GuestCaloricPreference) ;
+    ] .
+
+### Shape for Ingredient
+
+:IngredientShape a sh:NodeShape ;
+    sh:targetClass :Ingredient ;
+    sh:property [
+        sh:path :HasCalories ;
+        sh:datatype xsd:double ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :IngredientIsCompatibleWithGuestFoodPreference ;
+        sh:node :GuestFoodTypePreferenceShape ;
+        sh:minCount 0 ;
+    ] .
+
+### Shape for Meal
+
+:MealShape a sh:NodeShape ;
+    sh:targetClass :Meal ;
+    sh:property [
+        sh:path :HasCalories ;
+        sh:datatype xsd:double ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :MealHasIngredient ;
+        sh:node :IngredientShape ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :MealIsCompatibleWithGuestCaloricPreference ;
+        sh:node :GuestCaloricPreferenceShape ;
+        sh:minCount 0 ;
+    ] .
+
+### Shape for GuestFoodTypePreference
+
+:GuestFoodTypePreferenceShape a sh:NodeShape ;
+    sh:targetClass :GuestFoodTypePreference ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:hasValue :GuestFoodTypePreference ;
+    ] .
+
+### Shape for GuestCaloricPreference
+
+:GuestCaloricPreferenceShape a sh:NodeShape ;
+    sh:targetClass :GuestCaloricPreference ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:hasValue :GuestCaloricPreference ;
+    ] .
+
+### Shape for General Properties
+
+:ObjectHasNameShape a sh:PropertyShape ;
+    sh:path :ObjectHasName ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+### Linking Shapes to Classes
+
+:GuestShape sh:targetClass :Guest .
+:IngredientShape sh:targetClass :Ingredient .
+:MealShape sh:targetClass :Meal .
+:GuestFoodTypePreferenceShape sh:targetClass :GuestFoodTypePreference .
+:GuestCaloricPreferenceShape sh:targetClass :GuestCaloricPreference .
+
+### Ensuring Compatibility
+
+:IngredientCompatibilityShape a sh:NodeShape ;
+    sh:targetClass :Ingredient ;
+    sh:property [
+        sh:path :IngredientIsCompatibleWithGuestFoodPreference ;
+        sh:node :GuestFoodTypePreferenceShape ;
+        sh:minCount 0 ;
+    ] .
