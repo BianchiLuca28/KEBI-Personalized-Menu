@@ -102,6 +102,7 @@ fruit(lemon).
 fruit(assorted_fresh_fruits).
 
 % Calories per ingredient
+calories(herbs, 40). 
 calories(tomato, 18).
 calories(basil, 22).
 calories(garlic, 149).
