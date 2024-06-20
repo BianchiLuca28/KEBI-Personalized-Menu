@@ -346,9 +346,17 @@
     </decisionTable>
   </decision>
   <decision id="Decision_1hck4st" name="Calorie Validation">
+    <informationRequirement id="InformationRequirement_0whcaly">
+      <requiredDecision href="#Decision_0vvkrx3" />
+    </informationRequirement>
     <decisionTable id="DecisionTable_1vj4y8s">
       <input id="InputClause_1taqi2k" label="Dish" biodi:width="205">
         <inputExpression id="LiteralExpression_0kxbpxy" typeRef="string" />
+      </input>
+      <input id="InputClause_1xjt9os" label="Total Calories">
+        <inputExpression id="LiteralExpression_0b7k9er" typeRef="string">
+          <text></text>
+        </inputExpression>
       </input>
       <input id="InputClause_07xom7f" label="Calorie limit">
         <inputExpression id="LiteralExpression_1vek2ka" typeRef="number">
@@ -364,6 +372,9 @@
         <inputEntry id="UnaryTests_0wowo0x">
           <text>"Grilled Salmon"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_02i13b6">
+          <text>550</text>
+        </inputEntry>
         <inputEntry id="UnaryTests_0t68gm6">
           <text>&lt;=550</text>
         </inputEntry>
@@ -374,6 +385,9 @@
       <rule id="DecisionRule_1609dvx">
         <inputEntry id="UnaryTests_0si0bj0">
           <text>"Eggplant Parmesan"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sfuab1">
+          <text>700</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1vojg1f">
           <text>&gt;550</text>
@@ -386,6 +400,9 @@
         <inputEntry id="UnaryTests_03zizdb">
           <text>"Bruschetta"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1t16i9g">
+          <text>200</text>
+        </inputEntry>
         <inputEntry id="UnaryTests_0l95trv">
           <text>&lt;=550</text>
         </inputEntry>
@@ -396,6 +413,9 @@
       <rule id="DecisionRule_145kyp5">
         <inputEntry id="UnaryTests_0kg3nph">
           <text>"Caprese Salad"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15zd62h">
+          <text>250</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0hi04my">
           <text>&lt;=550</text>
@@ -408,6 +428,9 @@
         <inputEntry id="UnaryTests_0k0xmiq">
           <text>"Garlic Bread"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1gha8rh">
+          <text>270</text>
+        </inputEntry>
         <inputEntry id="UnaryTests_104tnf2">
           <text>&lt;=550</text>
         </inputEntry>
@@ -417,6 +440,9 @@
       </rule>
       <rule id="DecisionRule_14nfj17">
         <inputEntry id="UnaryTests_1v88cgu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10j2j86">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_16gmgpf">
@@ -553,38 +579,1274 @@
       </rule>
     </decisionTable>
   </decision>
+  <decision id="Decision_0vvkrx3" name="Calorie Calculator">
+    <decisionTable id="DecisionTable_0mlsnoh">
+      <input id="InputClause_0thvwc6" label="Dish">
+        <inputExpression id="LiteralExpression_1cowmuo" typeRef="string" />
+      </input>
+      <input id="InputClause_1tdd5p5" label="Tomatoes">
+        <inputExpression id="LiteralExpression_0fjyy22" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_11zlcfb" label="Basil">
+        <inputExpression id="LiteralExpression_11buz0d" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1c9pepm" label="Garlic">
+        <inputExpression id="LiteralExpression_0zylfik" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ldy384" label="Olive Oil">
+        <inputExpression id="LiteralExpression_1ao77ea" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0w10wz0" label="Toasted Bread">
+        <inputExpression id="LiteralExpression_00fhkq8" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0otsbuc" label="Mozzarella">
+        <inputExpression id="LiteralExpression_1tut4or" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1f4aq4y" label="Balsamic Glaze">
+        <inputExpression id="LiteralExpression_1yw1y0n" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1u1u32s" label="Cured Meats">
+        <inputExpression id="LiteralExpression_0u89mh6" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_03j6fw0" label="Cheese">
+        <inputExpression id="LiteralExpression_1c8jb7x" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_05uu5em" label="Olives">
+        <inputExpression id="LiteralExpression_0ktqvxv" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0r49vsy" label="Artichokes">
+        <inputExpression id="LiteralExpression_0q5jdnp" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_143yfqt" label="Bread">
+        <inputExpression id="LiteralExpression_1hx8a62" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_164rex5" label="Butter">
+        <inputExpression id="LiteralExpression_0zygn4j" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0j3mose" label="Parsley">
+        <inputExpression id="LiteralExpression_0z6m4ha" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1p7kx9v" label="Mushrooms">
+        <inputExpression id="LiteralExpression_0c69ypo" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0gtre0w" label="Breadcrumbs">
+        <inputExpression id="LiteralExpression_09mxoep" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_044f915" label="Parmesan Cheese">
+        <inputExpression id="LiteralExpression_1ig60rg" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0a8cgs4" label="Spaghetti">
+        <inputExpression id="LiteralExpression_0c0zy4a" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1qwr47t" label="Eggs">
+        <inputExpression id="LiteralExpression_1ywzhpd" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1xafips" label="Pancetta">
+        <inputExpression id="LiteralExpression_1n0z650" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0v7zdxv" label="Black Pepper">
+        <inputExpression id="LiteralExpression_1cy6fkq" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ruqzs1" label="Penne">
+        <inputExpression id="LiteralExpression_05pcasd" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1hlq47z" label="Chilli Pepper">
+        <inputExpression id="LiteralExpression_1ko3zgu" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_16yq10t" label="Fettuccine">
+        <inputExpression id="LiteralExpression_00ggipr" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0afmcof" label="Heavy Cream">
+        <inputExpression id="LiteralExpression_0hgg9gh" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0pbrt2h" label="Gluten Free Fusilli">
+        <inputExpression id="LiteralExpression_1ezn4je" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0viqil4" label="Assorted Vegetables">
+        <inputExpression id="LiteralExpression_1vssk6p" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1j6x1yv" label="Red Pepper Flakes">
+        <inputExpression id="LiteralExpression_1az25vq" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0je02lv" label="Pizza Dough">
+        <inputExpression id="LiteralExpression_0kavora" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0e2mklc" label="Tomato Sauce">
+        <inputExpression id="LiteralExpression_14v510e" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_01m3e36" label="Pepperoni">
+        <inputExpression id="LiteralExpression_0qcykn3" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1wr0l48" label="Ricotta">
+        <inputExpression id="LiteralExpression_1eyjoal" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0c91123" label="Gluten Free Pizza Dough">
+        <inputExpression id="LiteralExpression_0eemvwp" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_04e7zd6" label="Prosciutto">
+        <inputExpression id="LiteralExpression_0oqd5wv" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1bktw05" label="Fresh Arugula">
+        <inputExpression id="LiteralExpression_1q329gy" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1ao6k5f" label="Breaded Chicken">
+        <inputExpression id="LiteralExpression_1jndep1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0i2gilv" label="Marinara Sauce">
+        <inputExpression id="LiteralExpression_0e3obrq" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1ww0kh4" label="Breaded Egglplant">
+        <inputExpression id="LiteralExpression_10vzjin" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ncsz0y" label="Salmon Fillet">
+        <inputExpression id="LiteralExpression_0zhj7sn" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0r5ohx4" label="Lemon">
+        <inputExpression id="LiteralExpression_04kvzlz" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1owgvjw" label="Quinoa">
+        <inputExpression id="LiteralExpression_0tabvae" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_160tnfr" label="Black Beans">
+        <inputExpression id="LiteralExpression_0tl7mzn" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0m8fs1j" label="Corn">
+        <inputExpression id="LiteralExpression_1kgkx1x" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1q01sby" label="Bell Peppers">
+        <inputExpression id="LiteralExpression_036gbu1" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_07vn670" label="Chicken Breast">
+        <inputExpression id="LiteralExpression_1x6vndx" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1pd100z" label="Capers">
+        <inputExpression id="LiteralExpression_0gik8ii" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0jkh9bo" label="White Wine">
+        <inputExpression id="LiteralExpression_18i0uz4" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_193sb5x" label="Mascarpone Cheese">
+        <inputExpression id="LiteralExpression_0s45qfa" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1yhc0fb" label="Coffee">
+        <inputExpression id="LiteralExpression_17dnly6" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0hsjv9a" label="Ladyfingers">
+        <inputExpression id="LiteralExpression_1eiq4cn" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1s8mspb" label="Cocoa Powder">
+        <inputExpression id="LiteralExpression_1gsjfdk" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0jgc4w1" label="Milk">
+        <inputExpression id="LiteralExpression_12edwnn" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1ofybt8" label="Sugar">
+        <inputExpression id="LiteralExpression_01n0gz2" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_112vbdx" label="Gelatin">
+        <inputExpression id="LiteralExpression_1cznzvn" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0eksxhc" label="Vanilla">
+        <inputExpression id="LiteralExpression_07sf7dc" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1tz6ho8" label="Assorted Fresh Fruites">
+        <inputExpression id="LiteralExpression_1y20nfo" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0e98t6v" label="Chocolate Chips">
+        <inputExpression id="LiteralExpression_067n6d1" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1g4idcn" label="Pastry Shell">
+        <inputExpression id="LiteralExpression_18l57no" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_016k8xh" label="Herbs">
+        <inputExpression id="LiteralExpression_0nxg1ar" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0vr0bj7" label="Total Calories" typeRef="number" />
+      <rule id="DecisionRule_0pm8i4p">
+        <inputEntry id="UnaryTests_0bjc4bz">
+          <text>"Bruschetta"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jsk7sq">
+          <text>18 * 1.66</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1agqoid">
+          <text>22 * 0.22</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bkwnk7">
+          <text>149 * 0.067</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c3q93p">
+          <text>884 * 0.09</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ai8nzf">
+          <text>265 * 0.28</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ed7cyn">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mr8jkq">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19ju29w">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cdxzj1">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_194byjb">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ro8h4t">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yyy42s">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00qup5b">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x5fyty">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tff08h">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13fmhv5">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kv272g">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a6ledj">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oqm056">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s5daoa">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r0ze50">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u3mmk3">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j49k6v">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x3q8je">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17kxss8">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jw4o0b">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p8etqy">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bkp7i8">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n0bpf7">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yq47ch">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zzey1u">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hjwi1t">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q8dc2h">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_172achf">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ev06d6">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wiot3c">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18h5w7n">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1782tip">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kvuyy0">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kop4mp">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gf7kwo">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jev9jx">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xdmmrw">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yeexh4">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16mwp8v">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15via96">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pc7gmi">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jn45a3">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yjgcfh">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fqww7g">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uh7kxe">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cext2r">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tmu0sw">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bqrsa8">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1634jqm">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1je8h2q">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b4vjdd">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ygh17u">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n2uo0l">
+          <text>0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kklr7d">
+          <text>200</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0nxw5vl">
+        <inputEntry id="UnaryTests_0tanisg">
+          <text>"Grilled Salmon"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01ng51m">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pxekox">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04d8wpl">
+          <text>149 * 0.067</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00nopx6">
+          <text>884 * 0.11</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qn6yyb">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19srpgf">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c28e3a">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ajdj9r">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g8jzw6">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_038ar25">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05kzm1c">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d7hxm6">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e7kb1p">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07lxom1">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wjax2q">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w0bfge">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kbdb7s">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ixp85r">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iwlf7s">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lf22gl">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nskzz3">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o1o9kk">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rf4vrp">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s16pwq">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hew0yn">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17j3ygc">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hsrf1p">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yocuwm">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h6n6vb">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iv8uek">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vloj7i">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1drummp">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nwyl7x">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l6i9v8">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r8ry4n">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uuh29a">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tzdztu">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aylsvq">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02opmig">
+          <text>206 * 1.69</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mvcyrs">
+          <text>29 * 0.34</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g0gbe1">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sobvpp">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hhrg3v">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19vzgr4">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_050zcjw">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_099tes6">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0778dc4">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j92s06">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v9j6fg">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14junym">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b3a7w7">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10or4ek">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cjn2gu">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z2v34y">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sycgrf">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jm8mgn">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ta54nj">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g7e1ia">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g62tio">
+          <text>40 * 2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qx487b">
+          <text>550</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1nm0v3j">
+        <inputEntry id="UnaryTests_0o7cfo7">
+          <text>"Eggplant Parmesan"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wdivpm">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mlud5c">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0szckr1">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r8jrox">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nqpg22">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lita6j">
+          <text>280 * 0.35</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dmr6ja">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1km1txk">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1plvoag">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bepj8j">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qunb4i">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gw1i9d">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14uwbdq">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15ge04t">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lwojjs">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gbszys">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l3a5h9">
+          <text>431 * 0.23</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1b44nq2">
+          <text>131 * 0.76</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07ie2b8">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ltjvnf">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kjkz7v">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0409j4g">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ao3qgv">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15xc2yu">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07t4ddh">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mcdp1a">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02of8ec">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bkwd5k">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bv0lru">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rzq1bu">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kpr81z">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0olszo3">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vz03ws">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0psfsm5">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m7gnyc">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08ku7sb">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ncnu9r">
+          <text>70 * 1.42</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19vidu8">
+          <text>120 * 2.5</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wxuuz8">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07wogzv">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1npv56m">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13o4dgm">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tu75ca">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kev91f">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x0fdwm">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a5vgv3">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cti2zd">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fe6pkt">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u7cpt9">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03mwfh3">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vu89l4">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0os6aij">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15w0wyl">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ghpqo2">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vap13s">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ue9de7">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t85r6z">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17mrhui">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k408dw">
+          <text>0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rf2eos">
+          <text>700</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1g5z45t">
+        <inputEntry id="UnaryTests_1blg3k7">
+          <text>"Caprese Salad"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c6zvym">
+          <text>18 * 1.66</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i6vl83">
+          <text>22 * 0.22</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0udgp42">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j1h26y">
+          <text>884 * 0.09</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08iezyq">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1copbiy">
+          <text>280 * 0.35</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d5natq">
+          <text>80 * 0.43</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rzqlck">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i5hqmo">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zr48xg">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vf90aa">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16e3hk5">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d6o0y7">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ysy5j3">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y95hg3">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m2rn6j">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1psvt16">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uh8j1f">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kthisp">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_114nam4">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rvtptp">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19qj4x9">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cwj1a7">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04y4vte">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rt8m54">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03rzuim">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13l0tqd">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09drmdh">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1te7b9d">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dogz9j">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ghaept">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18fd5hc">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ko7mqy">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kjrn82">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q1my0x">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0raos0f">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m4bmp0">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mpre2a">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wadkpe">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n5ucrl">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zvey25">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sm3s1j">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1knq3qr">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fzjxsq">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_164s7sh">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18s9gxf">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15olgo7">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0urp7h9">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fbypvf">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09up95r">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0otxv1s">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wgmms2">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pve9gm">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w1v9vb">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ow34xx">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bneot4">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09hm42l">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t5s7qi">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xx09a7">
+          <text>0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08099iq">
+          <text>250</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g1c0er">
+        <inputEntry id="UnaryTests_10ql5p8">
+          <text>"Garlic Bread"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00gnfzi">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0761zob">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u9u8s7">
+          <text>149 * 0.067</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1920zue">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sn6bye">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11qtg77">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mr230d">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oh5pzq">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vuzo9c">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ap9vce">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e3y5yj">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lfg2a3">
+          <text>265 * 0.56</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sahs6g">
+          <text>717 * 0.14</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xdyj84">
+          <text>36 * 0.27</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ebjq5j">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vddgms">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pp09xn">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03urmf9">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c3lbhb">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09sv72r">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f67mvp">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p2bc3h">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_052632x">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hsuvmv">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xsvgbg">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05yqs0j">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0natkd2">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_185a2p0">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wn2h7t">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gvy2cc">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nj1jbn">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vkeyuu">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nhszwq">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tz714f">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q6nk6l">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v536eg">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hdx46m">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0er4kvq">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ussb7p">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08agyzg">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nnnxtp">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04i8jku">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00ceqzn">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hs7eqi">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16yg8vi">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ybnahq">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sixgst">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zb64v0">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16i9sm1">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jnp01q">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11h0kvw">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t1gvre">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v642w2">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01mw3e4">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mzmqlt">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yd1rzi">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n12aly">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aoynex">
+          <text>0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i361gm">
+          <text>0</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1t9d2xq">
+          <text>270</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <dmndi:DMNShape id="DMNShape_1vmmzd3" dmnElementRef="Decision_0fpvo2x">
-        <dc:Bounds height="80" width="180" x="430" y="80" />
+        <dc:Bounds height="80" width="180" x="430" y="280" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_1up30mv" dmnElementRef="Decision_04c3w9s">
-        <dc:Bounds height="80" width="180" x="430" y="240" />
+        <dc:Bounds height="80" width="180" x="430" y="440" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_1jns7cu" dmnElementRef="Decision_03b557o">
-        <dc:Bounds height="80" width="180" x="160" y="80" />
+        <dc:Bounds height="80" width="180" x="160" y="280" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_0f9qo8x" dmnElementRef="InformationRequirement_0n8jh1a">
-        <di:waypoint x="340" y="120" />
-        <di:waypoint x="410" y="120" />
-        <di:waypoint x="430" y="120" />
+        <di:waypoint x="340" y="320" />
+        <di:waypoint x="410" y="320" />
+        <di:waypoint x="430" y="320" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="DMNEdge_19ekmtu" dmnElementRef="InformationRequirement_17rqqxr">
-        <di:waypoint x="520" y="240" />
-        <di:waypoint x="520" y="180" />
-        <di:waypoint x="520" y="160" />
+        <di:waypoint x="520" y="440" />
+        <di:waypoint x="520" y="380" />
+        <di:waypoint x="520" y="360" />
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="DMNEdge_1sfo8jw" dmnElementRef="InformationRequirement_17nkehc">
-        <di:waypoint x="730" y="120" />
-        <di:waypoint x="630" y="120" />
-        <di:waypoint x="610" y="120" />
+        <di:waypoint x="730" y="320" />
+        <di:waypoint x="630" y="320" />
+        <di:waypoint x="610" y="320" />
       </dmndi:DMNEdge>
       <dmndi:DMNShape id="DMNShape_05rv53m" dmnElementRef="Decision_1hck4st">
-        <dc:Bounds height="80" width="180" x="730" y="80" />
+        <dc:Bounds height="80" width="180" x="730" y="280" />
       </dmndi:DMNShape>
       <dmndi:DMNShape id="DMNShape_0pf42vu" dmnElementRef="Decision_0574wku">
-        <dc:Bounds height="80" width="180" x="1070" y="80" />
+        <dc:Bounds height="80" width="180" x="420" y="80" />
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_05ao22q" dmnElementRef="Decision_0vvkrx3">
+        <dc:Bounds height="80" width="180" x="730" y="460" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0yrjj0l" dmnElementRef="InformationRequirement_0whcaly">
+        <di:waypoint x="820" y="460" />
+        <di:waypoint x="820" y="380" />
+        <di:waypoint x="820" y="360" />
+      </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </definitions>
