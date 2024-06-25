@@ -13,6 +13,12 @@
         sh:path :GuestHasFoodType ;
         sh:node :GuestFoodPreferenceShape ;
         sh:minCount 0 ;
+    ] ;
+    sh:property [
+        sh:path :ObjectHasName ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
     ] .
 
 ### Shape for GuestFoodPreference
@@ -22,41 +28,6 @@
     sh:property [
         sh:path rdf:type ;
         sh:in (:GuestFoodTypePreference :GuestCaloricPreference) ;
-    ] .
-
-### Shape for Ingredient
-
-:IngredientShape a sh:NodeShape ;
-    sh:targetClass :Ingredient ;
-    sh:property [
-        sh:path :HasCalories ;
-        sh:datatype xsd:double ;
-        sh:minCount 1 ;
-    ] ;
-    sh:property [
-        sh:path :IngredientIsCompatibleWithGuestFoodPreference ;
-        sh:node :GuestFoodTypePreferenceShape ;
-        sh:minCount 0 ;
-    ] .
-
-### Shape for Meal
-
-:MealShape a sh:NodeShape ;
-    sh:targetClass :Meal ;
-    sh:property [
-        sh:path :HasCalories ;
-        sh:datatype xsd:double ;
-        sh:minCount 1 ;
-    ] ;
-    sh:property [
-        sh:path :MealHasIngredient ;
-        sh:node :IngredientShape ;
-        sh:minCount 1 ;
-    ] ;
-    sh:property [
-        sh:path :MealIsCompatibleWithGuestCaloricPreference ;
-        sh:node :GuestCaloricPreferenceShape ;
-        sh:minCount 0 ;
     ] .
 
 ### Shape for GuestFoodTypePreference
@@ -77,13 +48,52 @@
         sh:hasValue :GuestCaloricPreference ;
     ] .
 
-### Shape for General Properties
+### Shape for Ingredient
 
-:ObjectHasNameShape a sh:PropertyShape ;
-    sh:path :ObjectHasName ;
-    sh:datatype xsd:string ;
-    sh:minCount 1 ;
-    sh:maxCount 1 .
+:IngredientShape a sh:NodeShape ;
+    sh:targetClass :Ingredient ;
+    sh:property [
+        sh:path :HasCalories ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :IngredientIsCompatibleWithGuestFoodPreference ;
+        sh:node :GuestFoodTypePreferenceShape ;
+        sh:minCount 0 ;
+    ] ;
+    sh:property [
+        sh:path :ObjectHasName ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+### Shape for Meal
+
+:MealShape a sh:NodeShape ;
+    sh:targetClass :Meal ;
+    sh:property [
+        sh:path :HasCalories ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :MealHasIngredient ;
+        sh:node :IngredientShape ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :NotCompatibleWith ;
+        sh:node :GuestCaloricPreferenceShape ;
+        sh:minCount 0 ;
+    ] ;
+    sh:property [
+        sh:path :ObjectHasName ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
 
 ### Linking Shapes to Classes
 
@@ -92,13 +102,3 @@
 :MealShape sh:targetClass :Meal .
 :GuestFoodTypePreferenceShape sh:targetClass :GuestFoodTypePreference .
 :GuestCaloricPreferenceShape sh:targetClass :GuestCaloricPreference .
-
-### Ensuring Compatibility
-
-:IngredientCompatibilityShape a sh:NodeShape ;
-    sh:targetClass :Ingredient ;
-    sh:property [
-        sh:path :IngredientIsCompatibleWithGuestFoodPreference ;
-        sh:node :GuestFoodTypePreferenceShape ;
-        sh:minCount 0 ;
-    ] .
