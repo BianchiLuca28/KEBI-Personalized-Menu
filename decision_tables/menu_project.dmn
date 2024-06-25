@@ -455,6 +455,9 @@
     </decisionTable>
   </decision>
   <decision id="Decision_0574wku" name="Menu recommendation 2">
+    <informationRequirement id="InformationRequirement_0329hql">
+      <requiredDecision href="#Decision_1exckfv" />
+    </informationRequirement>
     <decisionTable id="DecisionTable_1qdamk5">
       <input id="InputClause_1vsmu3n" label="Guest Preference">
         <inputExpression id="LiteralExpression_1ut0eg3" typeRef="string" />
@@ -478,6 +481,14 @@
           <text>"Calorie-conscious","none","High-Calorie"</text>
         </inputValues>
       </input>
+      <input id="InputClause_1yoyy35" label="Meal type" biodi:width="458">
+        <inputExpression id="LiteralExpression_13e7a83" typeRef="string">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0m89lvk">
+          <text>"vegetarian","carnivore","vegetarian with fish"</text>
+        </inputValues>
+      </input>
       <output id="OutputClause_1fwq4fr" label="Recommended Dishes" typeRef="string" biodi:width="666" />
       <rule id="DecisionRule_1vbef2u">
         <inputEntry id="UnaryTests_1uxgibu">
@@ -488,6 +499,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_14zz08t">
           <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r1xlhd">
+          <text>["Grilled Salmon", "Stuffed Bell Peppers", "Chicken Piccata", "Fruit Salad", "Gluten-Free Fusilli Primavera"]</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vj6day">
           <text>["Grilled Salmon", "Stuffed Bell Peppers", "Chicken Piccata", "Fruit Salad", "Gluten-Free Fusilli Primavera"]</text>
@@ -503,6 +517,9 @@
         <inputEntry id="UnaryTests_09uitzo">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_085sdaq">
+          <text> </text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_15jgodc">
           <text>["Fettuccine Alfredo", "Margherita Pizza", "Vegetarian Pizza", "Eggplant Parmesan"]</text>
         </outputEntry>
@@ -516,6 +533,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_1f3xgbi">
           <text>"Calorie-conscious"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l7h4tp">
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1p61971">
           <text>["Garlic Bread", "Tiramisu", "Cannoli", "Gelato", "Panna Cotta"]</text>
@@ -531,6 +551,9 @@
         <inputEntry id="UnaryTests_0nxtkfy">
           <text>"Calorie-conscious"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0ukhbnn">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_02ipwjw">
           <text>["Bruschetta", "Stuffed Mushrooms", "Spaghetti Carbonara", "Penne Arrabbiata", "Spaghetti aglio e Olio", "Pepperoni Pizza", "Prosciutto e Arugula Pizza", "Chicken Parmesan"]</text>
         </outputEntry>
@@ -544,6 +567,9 @@
         </inputEntry>
         <inputEntry id="UnaryTests_0r6sdp4">
           <text>"Calorie-conscious"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06begau">
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0wn5uv7">
           <text>["Caprese Salad"]</text>
@@ -559,6 +585,9 @@
         <inputEntry id="UnaryTests_0qonfca">
           <text>"Calorie-conscious"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_09g9zxk">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1szpmbq">
           <text>["Antipasto Platter"]</text>
         </outputEntry>
@@ -573,8 +602,45 @@
         <inputEntry id="UnaryTests_1qehta7">
           <text>"none"</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0do4pmz">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_164spah">
           <text>["Gluten-Free Pizza Bianca"]</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16l2i4v">
+        <inputEntry id="UnaryTests_0n33of2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oz0dqj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09rdz3j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_089trhm">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0k04hsu">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10y57c7">
+        <inputEntry id="UnaryTests_1yaxqur">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p60ve8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0eb17u9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yrcoj2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1k2u4re">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
@@ -1807,6 +1873,41 @@
       </rule>
     </decisionTable>
   </decision>
+  <decision id="Decision_1exckfv" name="Decide on meal type">
+    <decisionTable id="DecisionTable_13nst07">
+      <input id="InputClause_0mk4qb0" label="Ingredient">
+        <inputExpression id="LiteralExpression_0uihgdq" typeRef="string" />
+      </input>
+      <input id="InputClause_13elp3b">
+        <inputExpression id="LiteralExpression_0h2hlq0" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_0f68bkn" typeRef="string" />
+      <rule id="DecisionRule_1tjnpja">
+        <inputEntry id="UnaryTests_1wxzdft">
+          <text>"Bruschetta"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ji220t">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pmv391">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mrissn">
+        <inputEntry id="UnaryTests_1uvefjy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lp1t44">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07zljs5">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <dmndi:DMNShape id="DMNShape_1vmmzd3" dmnElementRef="Decision_0fpvo2x">
@@ -1847,6 +1948,14 @@
         <di:waypoint x="820" y="380" />
         <di:waypoint x="820" y="360" />
       </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_1jnmc9o" dmnElementRef="InformationRequirement_0329hql">
+        <di:waypoint x="730" y="120" />
+        <di:waypoint x="620" y="120" />
+        <di:waypoint x="600" y="120" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_07a0odr" dmnElementRef="Decision_1exckfv">
+        <dc:Bounds height="80" width="180" x="730" y="80" />
+      </dmndi:DMNShape>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </definitions>

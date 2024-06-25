@@ -30,22 +30,28 @@
                   rdfs:range :GuestFoodPreference .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/IngredientIsCompatibleWithGuestFoodPreference
-:IngredientIsCompatibleWithGuestFoodPreference rdf:type owl:ObjectProperty ;
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/IngredientNotCompatibleWithFoodTypePreference
+:IngredientNotCompatibleWithFoodTypePreference rdf:type owl:ObjectProperty ;
                                                rdfs:domain :Ingredient ;
                                                rdfs:range :GuestFoodTypePreference .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/MealHasIngredient
-:MealHasIngredient rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Meal ;
-                   rdfs:range :Ingredient .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/IngredientUsageInMeal
+:IngredientUsageInMeal rdf:type owl:ObjectProperty ;
+                       rdfs:domain :IngredientUsage ;
+                       rdfs:range :Meal .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/NotCompatibleWith
-:NotCompatibleWith rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Meal ;
-                   rdfs:range :GuestCaloricPreference .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/MealNotCompatibleWithFoodPreference
+:MealNotCompatibleWithFoodPreference rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :Meal ;
+                                     rdfs:range :GuestFoodPreference .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/UsedIngredient
+:UsedIngredient rdf:type owl:ObjectProperty ;
+                rdfs:domain :IngredientUsage ;
+                rdfs:range :Ingredient .
 
 
 #################################################################
@@ -57,6 +63,12 @@
              rdfs:domain :Ingredient ,
                          :Meal ;
              rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/IngredientUsageInGrams
+:IngredientUsageInGrams rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :IngredientUsage ;
+                        rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ObjectHasName
@@ -91,6 +103,10 @@
 :Ingredient rdf:type owl:Class .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/IngredientUsage
+:IngredientUsage rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Meal
 :Meal rdf:type owl:Class .
 
@@ -99,13 +115,17 @@
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Herbs_In_GrilledSalmon
+:Herbs_In_GrilledSalmon rdf:type owl:NamedIndividual ,
+                                 :IngredientUsage ;
+                        :IngredientUsageInMeal :GrilledSalmon ;
+                        :UsedIngredient :Herbs ;
+                        :IngredientUsageInGrams 200 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/AntipastoPlatter
 :AntipastoPlatter rdf:type owl:NamedIndividual ,
                            :Meal ;
-                  :MealHasIngredient :Artichokes ,
-                                     :Cheese ,
-                                     :CuredMeats ,
-                                     :Olives ;
                   :ObjectHasName "Antipasto Platter" .
 
 
@@ -137,11 +157,35 @@
                :ObjectHasName "Balsamic Glaze" .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BalsamicGlaze_In_CapreseSalad
+:BalsamicGlaze_In_CapreseSalad rdf:type owl:NamedIndividual ,
+                                        :IngredientUsage ;
+                               :IngredientUsageInMeal :CapreseSalad ;
+                               :UsedIngredient :BalsamicGlaze ;
+                               :IngredientUsageInGrams 43 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Basil
 :Basil rdf:type owl:NamedIndividual ,
                 :Ingredient ;
        :HasCalories 22 ;
        :ObjectHasName "Basil" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Basil_In_Bruschetta
+:Basil_In_Bruschetta rdf:type owl:NamedIndividual ,
+                              :IngredientUsage ;
+                     :IngredientUsageInMeal :Bruschetta ;
+                     :UsedIngredient :Basil ;
+                     :IngredientUsageInGrams 22 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Basil_In_CapreseSalad
+:Basil_In_CapreseSalad rdf:type owl:NamedIndividual ,
+                                :IngredientUsage ;
+                       :IngredientUsageInMeal :CapreseSalad ;
+                       :UsedIngredient :Basil ;
+                       :IngredientUsageInGrams 22 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BellPeppers
@@ -172,6 +216,14 @@
        :ObjectHasName "Bread" .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Bread_In_GarlicBread
+:Bread_In_GarlicBread rdf:type owl:NamedIndividual ,
+                               :IngredientUsage ;
+                      :IngredientUsageInMeal :GarlicBread ;
+                      :UsedIngredient :Bread ;
+                      :IngredientUsageInGrams 56 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Breadcrumbs
 :Breadcrumbs rdf:type owl:NamedIndividual ,
                       :Ingredient ;
@@ -194,14 +246,17 @@
                  :IngredientIsNotCompatibleWithFoodPreference :Gluten_Intollerant .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BreadedEggplant_In_EggplantParmesan
+:BreadedEggplant_In_EggplantParmesan rdf:type owl:NamedIndividual ,
+                                              :IngredientUsage ;
+                                     :IngredientUsageInMeal :EggplantParmesan ;
+                                     :UsedIngredient :BreadedEggplant ;
+                                     :IngredientUsageInGrams 250 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Bruschetta
 :Bruschetta rdf:type owl:NamedIndividual ,
                      :Meal ;
-            :MealHasIngredient :Basil ,
-                               :Garlic ,
-                               :OliveOil ,
-                               :ToastedBread ,
-                               :Tomato ;
             :ObjectHasName "Bruschetta" .
 
 
@@ -212,6 +267,12 @@
         :ObjectHasName "Butter" .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Butter_In_GarlicBread
+:Butter_In_GarlicBread rdf:type owl:NamedIndividual ,
+                                :IngredientUsage ;
+                       :IngredientUsageInMeal :GarlicBread .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Calorie_Conscious
 :Calorie_Conscious rdf:type owl:NamedIndividual ,
                             :GuestCaloricPreference .
@@ -220,10 +281,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Cannoli
 :Cannoli rdf:type owl:NamedIndividual ,
                   :Meal ;
-         :MealHasIngredient :ChocolateChips ,
-                            :PastryShell ,
-                            :Ricotta ,
-                            :Sugar ;
          :ObjectHasName "Cannoli" .
 
 
@@ -237,11 +294,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/CapreseSalad
 :CapreseSalad rdf:type owl:NamedIndividual ,
                        :Meal ;
-              :MealHasIngredient :BalsamicGlaze ,
-                                 :Basil ,
-                                 :Mozzarella ,
-                                 :OliveOil ,
-                                 :Tomato ;
               :ObjectHasName "Caprese Salad" .
 
 
@@ -262,22 +314,12 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ChickenParmisan
 :ChickenParmisan rdf:type owl:NamedIndividual ,
                           :Meal ;
-                 :MealHasIngredient :BreadedChicken ,
-                                    :MarinaraSauce ,
-                                    :Mozzarella ,
-                                    :ParmesanCheese ,
-                                    :Spaghetti ;
                  :ObjectHasName "Chicken Parmisan" .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ChickenPiccata
 :ChickenPiccata rdf:type owl:NamedIndividual ,
                          :Meal ;
-                :MealHasIngredient :Capers ,
-                                   :ChickenBreast ,
-                                   :Lemon ,
-                                   :Parsley ,
-                                   :WhiteWine ;
                 :ObjectHasName "Chicken Piccata" .
 
 
@@ -326,7 +368,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/CuredMeats
 :CuredMeats rdf:type owl:NamedIndividual ,
                      :Ingredient ;
-            :MealHasIngredient :Cheese ;
             :HasCalories 400 ;
             :ObjectHasName "Cured Meats" .
 
@@ -334,11 +375,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/EggplantParmesan
 :EggplantParmesan rdf:type owl:NamedIndividual ,
                            :Meal ;
-                  :MealHasIngredient :BreadedEggplant ,
-                                     :MarinaraSauce ,
-                                     :Mozzarella ,
-                                     :ParmesanCheese ,
-                                     :Spaghetti ;
                   :ObjectHasName "Eggplant Parmesan" .
 
 
@@ -359,10 +395,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/FettuccineAlfredo
 :FettuccineAlfredo rdf:type owl:NamedIndividual ,
                             :Meal ;
-                   :MealHasIngredient :Butter ,
-                                      :Fettuccine ,
-                                      :HeavyCream ,
-                                      :ParmesanCheese ;
                    :ObjectHasName "Fettuccine Alfredo" .
 
 
@@ -383,7 +415,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/FruitSalad
 :FruitSalad rdf:type owl:NamedIndividual ,
                      :Meal ;
-            :MealHasIngredient :AssortedFreshFruits ;
             :ObjectHasName "Fruit Salad" .
 
 
@@ -397,11 +428,31 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GarlicBread
 :GarlicBread rdf:type owl:NamedIndividual ,
                       :Meal ;
-             :MealHasIngredient :Bread ,
-                                :Butter ,
-                                :Garlic ,
-                                :Parsley ;
              :ObjectHasName "Garlic Bread" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic_In_Bruschetta
+:Garlic_In_Bruschetta rdf:type owl:NamedIndividual ,
+                               :IngredientUsage ;
+                      :IngredientUsageInMeal :Bruschetta ;
+                      :UsedIngredient :Garlic ;
+                      :IngredientUsageInGrams 7 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic_In_GarlicBread
+:Garlic_In_GarlicBread rdf:type owl:NamedIndividual ,
+                                :IngredientUsage ;
+                       :IngredientUsageInMeal :GarlicBread ;
+                       :UsedIngredient :Garlic ;
+                       :IngredientUsageInGrams 7 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic_In_GrilledSalmon
+:Garlic_In_GrilledSalmon rdf:type owl:NamedIndividual ,
+                                  :IngredientUsage ;
+                         :IngredientUsageInMeal :GrilledSalmon ;
+                         :UsedIngredient :Garlic ;
+                         :IngredientUsageInGrams 7 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Gelatin
@@ -414,9 +465,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Gelato
 :Gelato rdf:type owl:NamedIndividual ,
                  :Meal ;
-        :MealHasIngredient :Flavorings ,
-                           :Milk ,
-                           :Sugar ;
         :ObjectHasName "Gelato" .
 
 
@@ -430,21 +478,12 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GlutenFreeFusilliPrimavera
 :GlutenFreeFusilliPrimavera rdf:type owl:NamedIndividual ,
                                      :Meal ;
-                            :MealHasIngredient :AssortedVegetables ,
-                                               :Garlic ,
-                                               :GlutenFreeFusilli ,
-                                               :OliveOil ;
                             :ObjectHasName "Gluten Free Fusilli Primavera" .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GlutenFreePizzaBianca
 :GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
                                 :Meal ;
-                       :MealHasIngredient :Garlic ,
-                                          :GlutenFreePizzaDough ,
-                                          :Mozzarella ,
-                                          :OliveOil ,
-                                          :Ricotta ;
                        :ObjectHasName "Gluten Free Pizza Bianca" .
 
 
@@ -464,11 +503,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GrilledSalmon
 :GrilledSalmon rdf:type owl:NamedIndividual ,
                         :Meal ;
-               :MealHasIngredient :Garlic ,
-                                  :Herbs ,
-                                  :Lemon ,
-                                  :OliveOil ,
-                                  :SalmonFillet ;
                :ObjectHasName "Grilled Salmon" .
 
 
@@ -482,7 +516,7 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Herbs
 :Herbs rdf:type owl:NamedIndividual ,
                 :Ingredient ;
-       :HasCalories 20 ;
+       :HasCalories 40 ;
        :ObjectHasName "Herbs" .
 
 
@@ -505,6 +539,14 @@
        :ObjectHasName "Lemon" .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Lemon_In_GrilledSalmon
+:Lemon_In_GrilledSalmon rdf:type owl:NamedIndividual ,
+                                 :IngredientUsage ;
+                        :IngredientUsageInMeal :GrilledSalmon ;
+                        :UsedIngredient :Lemon ;
+                        :IngredientUsageInGrams 34 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Luca
 :Luca rdf:type owl:NamedIndividual ,
                :Guest ;
@@ -516,11 +558,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/MargheritaPizza
 :MargheritaPizza rdf:type owl:NamedIndividual ,
                           :Meal ;
-                 :MealHasIngredient :Basil ,
-                                    :Mozzarella ,
-                                    :OliveOil ,
-                                    :PizzaDough ,
-                                    :Tomato ;
                  :ObjectHasName "Margherita Pizza" .
 
 
@@ -529,6 +566,14 @@
                         :Ingredient ;
                :HasCalories 70 ;
                :ObjectHasName "Marinara Sauce" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/MarinaraSauce_In_EggplantParmesan
+:MarinaraSauce_In_EggplantParmesan rdf:type owl:NamedIndividual ,
+                                            :IngredientUsage ;
+                                   :IngredientUsageInMeal :EggplantParmesan ;
+                                   :UsedIngredient :MarinaraSauce ;
+                                   :IngredientUsageInGrams 142 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/MascarponeCheese
@@ -553,6 +598,22 @@
             :IngredientIsNotCompatibleWithFoodPreference :Lactose_Intollerant .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella_In_CapreseSalad
+:Mozzarella_In_CapreseSalad rdf:type owl:NamedIndividual ,
+                                     :IngredientUsage ;
+                            :IngredientUsageInMeal :CapreseSalad ;
+                            :UsedIngredient :Mozzarella ;
+                            :IngredientUsageInGrams 35 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella_In_EggplantParmesan
+:Mozzarella_In_EggplantParmesan rdf:type owl:NamedIndividual ,
+                                         :IngredientUsage ;
+                                :IngredientUsageInMeal :EggplantParmesan ;
+                                :UsedIngredient :Mozzarella ;
+                                :IngredientUsageInGrams 35 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mushrooms
 :Mushrooms rdf:type owl:NamedIndividual ,
                     :Ingredient ;
@@ -565,6 +626,30 @@
                    :Ingredient ;
           :HasCalories 884 ;
           :ObjectHasName "Olive Oil" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil_In_Bruschetta
+:OliveOil_In_Bruschetta rdf:type owl:NamedIndividual ,
+                                 :IngredientUsage ;
+                        :IngredientUsageInMeal :Bruschetta ;
+                        :UsedIngredient :OliveOil ;
+                        :IngredientUsageInGrams 9 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil_In_CapreseSalad
+:OliveOil_In_CapreseSalad rdf:type owl:NamedIndividual ,
+                                   :IngredientUsage ;
+                          :IngredientUsageInMeal :CapreseSalad ;
+                          :UsedIngredient :OliveOil ;
+                          :IngredientUsageInGrams 9 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil_In_GrilledSalmon
+:OliveOil_In_GrilledSalmon rdf:type owl:NamedIndividual ,
+                                    :IngredientUsage ;
+                           :IngredientUsageInMeal :GrilledSalmon ;
+                           :UsedIngredient :OliveOil ;
+                           :IngredientUsageInGrams 11 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Olives
@@ -584,10 +669,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/PannaCotta
 :PannaCotta rdf:type owl:NamedIndividual ,
                      :Meal ;
-            :MealHasIngredient :Cream ,
-                               :Gelatin ,
-                               :Sugar ,
-                               :Vanilla ;
             :ObjectHasName "Panna Cotta" .
 
 
@@ -597,6 +678,14 @@
                 :HasCalories 431 ;
                 :ObjectHasName "Parmesan Cheese" ;
                 :IngredientIsNotCompatibleWithFoodPreference :Lactose_Intollerant .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ParmesanCheese_In_EggplantParmesan
+:ParmesanCheese_In_EggplantParmesan rdf:type owl:NamedIndividual ,
+                                             :IngredientUsage ;
+                                    :IngredientUsageInMeal :EggplantParmesan ;
+                                    :UsedIngredient :ParmesanCheese ;
+                                    :IngredientUsageInGrams 23 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Parsley
@@ -623,11 +712,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/PenneArrabbiata
 :PenneArrabbiata rdf:type owl:NamedIndividual ,
                           :Meal ;
-                 :MealHasIngredient :ChiliPeppers ,
-                                    :Garlic ,
-                                    :Parsley ,
-                                    :Penne ,
-                                    :Tomato ;
                  :HasCalories 500 ;
                  :ObjectHasName "Penne Arrabbiata" .
 
@@ -642,10 +726,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/PepperoniPizza
 :PepperoniPizza rdf:type owl:NamedIndividual ,
                          :Meal ;
-                :MealHasIngredient :Mozzarella ,
-                                   :Pepperoni ,
-                                   :PizzaDough ,
-                                   :TomatoSauce ;
                 :HasCalories 6600 ;
                 :ObjectHasName "Pepperoni Pizza" .
 
@@ -667,11 +747,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ProsciuttoeArugulaPizza
 :ProsciuttoeArugulaPizza rdf:type owl:NamedIndividual ,
                                   :Meal ;
-                         :MealHasIngredient :FreshArugula ,
-                                            :Mozzarella ,
-                                            :PizzaDough ,
-                                            :Prosciutto ,
-                                            :TomatoSauce ;
                          :ObjectHasName "Prosciutto e Arugula Pizza" .
 
 
@@ -704,6 +779,14 @@
               :IngredientIsNotCompatibleWithFoodPreference :Vegetarian .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/SalmonFillet_In_GrilledSalmon
+:SalmonFillet_In_GrilledSalmon rdf:type owl:NamedIndividual ,
+                                        :IngredientUsage ;
+                               :IngredientUsageInMeal :GrilledSalmon ;
+                               :UsedIngredient :SalmonFillet ;
+                               :IngredientUsageInGrams 169 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Spaghetti
 :Spaghetti rdf:type owl:NamedIndividual ,
                     :Ingredient ;
@@ -715,34 +798,26 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/SpaghettiCarbonara
 :SpaghettiCarbonara rdf:type owl:NamedIndividual ,
                              :Meal ;
-                    :MealHasIngredient :BlackPepper ,
-                                       :Eggs ,
-                                       :Pancetta ,
-                                       :ParmesanCheese ,
-                                       :Spaghetti ;
                     :ObjectHasName "Spaghetti Carbonara" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Spaghetti_In_EggplantParmesan
+:Spaghetti_In_EggplantParmesan rdf:type owl:NamedIndividual ,
+                                        :IngredientUsage ;
+                               :IngredientUsageInMeal :EggplantParmesan ;
+                               :UsedIngredient :Spaghetti ;
+                               :IngredientUsageInGrams 76 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/StuffedBellPeppers
 :StuffedBellPeppers rdf:type owl:NamedIndividual ,
                              :Meal ;
-                    :MealHasIngredient :BellPeppers ,
-                                       :BlackBeans ,
-                                       :Cheese ,
-                                       :Corn ,
-                                       :Quinoa ,
-                                       :Tomato ;
                     :ObjectHasName "Stuffed Bell Peppers" .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/StuffedMushrooms
 :StuffedMushrooms rdf:type owl:NamedIndividual ,
                            :Meal ;
-                  :MealHasIngredient :Breadcrumbs ,
-                                     :Garlic ,
-                                     :Herbs ,
-                                     :Mushrooms ,
-                                     :ParmesanCheese ;
                   :ObjectHasName "Stuffed Mashrooms" .
 
 
@@ -756,10 +831,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Tiramisu
 :Tiramisu rdf:type owl:NamedIndividual ,
                    :Meal ;
-          :MealHasIngredient :CocoaPowder ,
-                             :Coffee ,
-                             :Ladyfingers ,
-                             :MascarponeCheese ;
           :ObjectHasName "Tiramisù" .
 
 
@@ -769,6 +840,14 @@
               :HasCalories 265 ;
               :ObjectHasName "Toasted Bread" ;
               :IngredientIsNotCompatibleWithFoodPreference :Gluten_Intollerant .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ToastedBread_In_Bruschetta
+:ToastedBread_In_Bruschetta rdf:type owl:NamedIndividual ,
+                                     :IngredientUsage ;
+                            :IngredientUsageInMeal :Bruschetta ;
+                            :UsedIngredient :ToastedBread ;
+                            :IngredientUsageInGrams 28 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Tomato
@@ -783,6 +862,22 @@
                       :Ingredient ;
              :HasCalories 29 ;
              :ObjectHasName "Tomato Sauce" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Tomatoes_In_Bruschetta
+:Tomatoes_In_Bruschetta rdf:type owl:NamedIndividual ,
+                                 :IngredientUsage ;
+                        :IngredientUsageInMeal :Bruschetta ;
+                        :UsedIngredient :Tomato ;
+                        :IngredientUsageInGrams 166 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Tomatoes_In_CapreseSalad
+:Tomatoes_In_CapreseSalad rdf:type owl:NamedIndividual ,
+                                   :IngredientUsage ;
+                          :IngredientUsageInMeal :CapreseSalad ;
+                          :UsedIngredient :Tomato ;
+                          :IngredientUsageInGrams 166 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Vanilla
@@ -800,10 +895,6 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/VegetarianPizza
 :VegetarianPizza rdf:type owl:NamedIndividual ,
                           :Meal ;
-                 :MealHasIngredient :AssortedVegetables ,
-                                    :Mozzarella ,
-                                    :PizzaDough ,
-                                    :TomatoSauce ;
                  :ObjectHasName "Vegetarian Pizza" .
 
 
@@ -813,47 +904,5 @@
            :HasCalories 82 ;
            :ObjectHasName "White Wine" .
 
-
-#################################################################
-#    Rules
-#################################################################
-
-:meal rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-:calories rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "S1" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :HasCalories ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :meal ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :calories
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
-                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                               rdf:first :calories ;
-                                                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                                                          rdf:first 550 ;
-                                                                                                                          rdf:rest rdf:nil
-                                                                                                                        ]
-                                                                                                             ]
-                                                                ] ;
-                                                      rdf:rest rdf:nil
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :NotCompatibleWith ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :meal ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> :Calorie_Conscious
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
