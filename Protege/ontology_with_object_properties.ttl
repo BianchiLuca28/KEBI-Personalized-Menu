@@ -120,164 +120,10 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#AssortedVegetables_In_VegetarianPizza
-:AssortedVegetables_In_VegetarianPizza rdf:type owl:NamedIndividual ,
-                                                :IngredientUsage ;
-                                       :IngredientUsageInMeal :VegetarianPizza ;
-                                       :UsedIngredient :AssortedVegetables ;
-                                       :IngredientUsageInGrams 100 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#BellPeppers_In_StuffedBellPeppers
-:BellPeppers_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                            :IngredientUsage ;
-                                   :IngredientUsageInMeal :StuffedBellPeppers ;
-                                   :UsedIngredient :BellPeppers ;
-                                   :IngredientUsageInGrams 120 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#BlackBeans_In_StuffedBellPeppers
-:BlackBeans_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                           :IngredientUsage ;
-                                  :IngredientUsageInMeal :StuffedBellPeppers ;
-                                  :UsedIngredient :BlackBeans ;
-                                  :IngredientUsageInGrams 90 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Capers_In_ChickenPiccata
-:Capers_In_ChickenPiccata rdf:type owl:NamedIndividual ,
-                                   :IngredientUsage ;
-                          :IngredientUsageInMeal :ChickenPiccata ;
-                          :UsedIngredient :Capers ;
-                          :IngredientUsageInGrams 20 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Cheese_In_StuffedBellPeppers
-:Cheese_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                       :IngredientUsage ;
-                              :IngredientUsageInMeal :StuffedBellPeppers ;
-                              :UsedIngredient :Cheese ;
-                              :IngredientUsageInGrams 35 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#ChickenBreast_In_ChickenPiccata
-:ChickenBreast_In_ChickenPiccata rdf:type owl:NamedIndividual ,
-                                          :IngredientUsage ;
-                                 :IngredientUsageInMeal :ChickenPiccata ;
-                                 :UsedIngredient :ChickenBreast ;
-                                 :IngredientUsageInGrams 120 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Corn_In_StuffedBellPeppers
-:Corn_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                     :IngredientUsage ;
-                            :IngredientUsageInMeal :StuffedBellPeppers ;
-                            :UsedIngredient :Corn ;
-                            :IngredientUsageInGrams 80 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Garlic_In_GlutenFreePizzaBianca
-:Garlic_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
-                                          :IngredientUsage ;
-                                 :IngredientUsageInMeal :GlutenFreePizzaBianca ;
-                                 :UsedIngredient :Garlic ;
-                                 :IngredientUsageInGrams 15 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#GlutenFreePizzaDough_In_GlutenFreePizzaBianca
-:GlutenFreePizzaDough_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
-                                                        :IngredientUsage ;
-                                               :IngredientUsageInMeal :GlutenFreePizzaBianca ;
-                                               :UsedIngredient :GlutenFreePizzaDough ;
-                                               :IngredientUsageInGrams 120 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Lemon_In_ChickenPiccata
-:Lemon_In_ChickenPiccata rdf:type owl:NamedIndividual ,
-                                  :IngredientUsage ;
-                         :IngredientUsageInMeal :ChickenPiccata ;
-                         :UsedIngredient :Lemon ;
-                         :IngredientUsageInGrams 60 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Mozzarella_In_GlutenFreePizzaBianca
-:Mozzarella_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
-                                              :IngredientUsage ;
-                                     :IngredientUsageInMeal :GlutenFreePizzaBianca ;
-                                     :UsedIngredient :Mozzarella ;
-                                     :IngredientUsageInGrams 30 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Mozzarella_In_VegetarianPizza
-:Mozzarella_In_VegetarianPizza rdf:type owl:NamedIndividual ,
-                                        :IngredientUsage ;
-                               :IngredientUsageInMeal :VegetarianPizza ;
-                               :UsedIngredient :Mozzarella ;
-                               :IngredientUsageInGrams 35 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#OliveOil_In_GlutenFreePizzaBianca
-:OliveOil_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
-                                            :IngredientUsage ;
-                                   :IngredientUsageInMeal :GlutenFreePizzaBianca ;
-                                   :UsedIngredient :OliveOil ;
-                                   :IngredientUsageInGrams 15 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Parsley_In_ChickenPiccata
-:Parsley_In_ChickenPiccata rdf:type owl:NamedIndividual ,
-                                    :IngredientUsage ;
-                           :IngredientUsageInMeal :ChickenPiccata ;
-                           :UsedIngredient :Parsley ;
-                           :IngredientUsageInGrams 5 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#PizzaDough_In_VegetarianPizza
-:PizzaDough_In_VegetarianPizza rdf:type owl:NamedIndividual ,
-                                        :IngredientUsage ;
-                               :IngredientUsageInMeal :VegetarianPizza ;
-                               :UsedIngredient :PizzaDough ;
-                               :IngredientUsageInGrams 120 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Quinoa_In_StuffedBellPeppers
-:Quinoa_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                       :IngredientUsage ;
-                              :IngredientUsageInMeal :StuffedBellPeppers ;
-                              :UsedIngredient :Quinoa ;
-                              :IngredientUsageInGrams 100 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Ricotta_In_GlutenFreePizzaBianca
-:Ricotta_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
-                                           :IngredientUsage ;
-                                  :IngredientUsageInMeal :GlutenFreePizzaBianca ;
-                                  :UsedIngredient :Ricotta ;
-                                  :IngredientUsageInGrams 50 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#Tomaotes_In_StuffedBellPeppers
-:Tomaotes_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                         :IngredientUsage ;
-                                :IngredientUsageInMeal :StuffedBellPeppers ;
-                                :UsedIngredient :Tomato ;
-                                :IngredientUsageInGrams 100 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#TomatoSauce_In_VegetarianPizza
-:TomatoSauce_In_VegetarianPizza rdf:type owl:NamedIndividual ,
-                                         :IngredientUsage ;
-                                :IngredientUsageInMeal :VegetarianPizza ;
-                                :UsedIngredient :TomatoSauce ;
-                                :IngredientUsageInGrams 100 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9#WhiteWine_In_ChickenPiccata
-:WhiteWine_In_ChickenPiccata rdf:type owl:NamedIndividual ,
-                                      :IngredientUsage ;
-                             :IngredientUsageInMeal :ChickenPiccata ;
-                             :UsedIngredient :WhiteWine ;
-                             :IngredientUsageInGrams 25 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Angelica
+:Angelica rdf:type owl:NamedIndividual ,
+                   :Guest ;
+          :GuestHasFoodType :Gluten_Intollerant .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/AssortedVegetables
@@ -293,6 +139,14 @@
                                                   :IngredientUsageInMeal :GlutenFreeFusilliPrimavera ;
                                                   :UsedIngredient :AssortedVegetables ;
                                                   :IngredientUsageInGrams 100 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/AssortedVegetables_In_VegetarianPizza
+:AssortedVegetables_In_VegetarianPizza rdf:type owl:NamedIndividual ,
+                                                :IngredientUsage ;
+                                       :IngredientUsageInMeal :VegetarianPizza ;
+                                       :UsedIngredient :AssortedVegetables ;
+                                       :IngredientUsageInGrams 100 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BalsamicGlaze
@@ -348,11 +202,27 @@
              :ObjectHasName "Bell Peppers" .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BellPeppers_In_StuffedBellPeppers
+:BellPeppers_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
+                                            :IngredientUsage ;
+                                   :IngredientUsageInMeal :StuffedBellPeppers ;
+                                   :UsedIngredient :BellPeppers ;
+                                   :IngredientUsageInGrams 120 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BlackBeans
 :BlackBeans rdf:type owl:NamedIndividual ,
                      :Ingredient ;
             :IngredientHasCalories 132 ;
             :ObjectHasName "Black Beans" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BlackBeans_In_StuffedBellPeppers
+:BlackBeans_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
+                                           :IngredientUsage ;
+                                  :IngredientUsageInMeal :StuffedBellPeppers ;
+                                  :UsedIngredient :BlackBeans ;
+                                  :IngredientUsageInGrams 90 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BlackPepper
@@ -373,6 +243,7 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Bread
 :Bread rdf:type owl:NamedIndividual ,
                 :Ingredient ;
+       :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
        :IngredientHasCalories 265 ;
        :ObjectHasName "Bread" .
 
@@ -388,6 +259,7 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BreadedEggplant
 :BreadedEggplant rdf:type owl:NamedIndividual ,
                           :Ingredient ;
+                 :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
                  :IngredientHasCalories 120 ;
                  :ObjectHasName "Breaded Eggplant" ;
                  :IngredientIsNotCompatibleWithFoodPreference :Gluten_Intollerant .
@@ -410,6 +282,7 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Butter
 :Butter rdf:type owl:NamedIndividual ,
                  :Ingredient ;
+        :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intollerant ;
         :IngredientHasCalories 717 ;
         :ObjectHasName "Butter" .
 
@@ -422,7 +295,8 @@
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Calorie_Conscious
 :Calorie_Conscious rdf:type owl:NamedIndividual ,
-                            :GuestCaloricPreference .
+                            :GuestCaloricPreference ;
+                   :GuestHasFoodType :Vegetarian .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Capers
@@ -430,6 +304,14 @@
                  :Ingredient ;
         :IngredientHasCalories 23 ;
         :ObjectHasName "Capers" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Capers_In_ChickenPiccata
+:Capers_In_ChickenPiccata rdf:type owl:NamedIndividual ,
+                                   :IngredientUsage ;
+                          :IngredientUsageInMeal :ChickenPiccata ;
+                          :UsedIngredient :Capers ;
+                          :IngredientUsageInGrams 20 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/CapreseSalad
@@ -441,15 +323,33 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Cheese
 :Cheese rdf:type owl:NamedIndividual ,
                  :Ingredient ;
+        :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intollerant ;
         :IngredientHasCalories 402 ;
         :ObjectHasName "Cheese" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Cheese_In_StuffedBellPeppers
+:Cheese_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
+                                       :IngredientUsage ;
+                              :IngredientUsageInMeal :StuffedBellPeppers ;
+                              :UsedIngredient :Cheese ;
+                              :IngredientUsageInGrams 35 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ChickenBreast
 :ChickenBreast rdf:type owl:NamedIndividual ,
                         :Ingredient ;
+               :IngredientNotCompatibleWithFoodTypePreference :Vegetarian ;
                :IngredientHasCalories 165 ;
                :ObjectHasName "Chicken Breast" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ChickenBreast_In_ChickenPiccata
+:ChickenBreast_In_ChickenPiccata rdf:type owl:NamedIndividual ,
+                                          :IngredientUsage ;
+                                 :IngredientUsageInMeal :ChickenPiccata ;
+                                 :UsedIngredient :ChickenBreast ;
+                                 :IngredientUsageInGrams 120 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ChickenPiccata
@@ -480,6 +380,14 @@
       :ObjectHasName "Corn" .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Corn_In_StuffedBellPeppers
+:Corn_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
+                                     :IngredientUsage ;
+                            :IngredientUsageInMeal :StuffedBellPeppers ;
+                            :UsedIngredient :Corn ;
+                            :IngredientUsageInGrams 80 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/EggplantParmesan
 :EggplantParmesan rdf:type owl:NamedIndividual ,
                            :Meal ;
@@ -489,6 +397,7 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Eggs
 :Eggs rdf:type owl:NamedIndividual ,
                :Ingredient ;
+      :IngredientNotCompatibleWithFoodTypePreference :Vegetarian ;
       :IngredientHasCalories 155 ;
       :ObjectHasName "Eggs" .
 
@@ -499,6 +408,22 @@
                             :IngredientUsageInMeal :SpaghettiCarbonara ;
                             :UsedIngredient :Eggs ;
                             :IngredientUsageInGrams 130 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Fabio
+:Fabio rdf:type owl:NamedIndividual ,
+                :Guest ;
+       :GuestHasFoodType :Calorie_Conscious ,
+                         :Lactose_Intollerant .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Francesco
+:Francesco rdf:type owl:NamedIndividual ,
+                    :Guest ;
+           :GuestHasFoodType :Calorie_Conscious ,
+                             :Gluten_Intollerant ,
+                             :Lactose_Intollerant ,
+                             :Vegetarian .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic
@@ -536,6 +461,14 @@
                                       :IngredientUsageInMeal :GlutenFreeFusilliPrimavera ;
                                       :UsedIngredient :Garlic ;
                                       :IngredientUsageInGrams 20 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic_In_GlutenFreePizzaBianca
+:Garlic_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
+                                          :IngredientUsage ;
+                                 :IngredientUsageInMeal :GlutenFreePizzaBianca ;
+                                 :UsedIngredient :Garlic ;
+                                 :IngredientUsageInGrams 15 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic_In_GrilledSalmon
@@ -580,10 +513,17 @@
                       :ObjectHasName "Gluten Free Pizza Dough" .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GlutenFreePizzaDough_In_GlutenFreePizzaBianca
+:GlutenFreePizzaDough_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
+                                                        :IngredientUsage ;
+                                               :IngredientUsageInMeal :GlutenFreePizzaBianca ;
+                                               :UsedIngredient :GlutenFreePizzaDough ;
+                                               :IngredientUsageInGrams 120 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Gluten_Intollerant
 :Gluten_Intollerant rdf:type owl:NamedIndividual ,
-                             :GuestFoodTypePreference ;
-                    :GuestHasFoodType :Vegetarian .
+                             :GuestFoodTypePreference .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GrilledSalmon
@@ -616,6 +556,14 @@
                 :Ingredient ;
        :IngredientHasCalories 29 ;
        :ObjectHasName "Lemon" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Lemon_In_ChickenPiccata
+:Lemon_In_ChickenPiccata rdf:type owl:NamedIndividual ,
+                                  :IngredientUsage ;
+                         :IngredientUsageInMeal :ChickenPiccata ;
+                         :UsedIngredient :Lemon ;
+                         :IngredientUsageInGrams 60 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Lemon_In_GrilledSalmon
@@ -655,9 +603,15 @@
                                    :IngredientUsageInGrams 142 .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Michele
+:Michele rdf:type owl:NamedIndividual ,
+                  :Guest .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella
 :Mozzarella rdf:type owl:NamedIndividual ,
                      :Ingredient ;
+            :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intollerant ;
             :IngredientHasCalories 280 ;
             :ObjectHasName "Mozzarella" ;
             :IngredientIsNotCompatibleWithFoodPreference :Lactose_Intollerant .
@@ -679,9 +633,25 @@
                                 :IngredientUsageInGrams 35 .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella_In_GlutenFreePizzaBianca
+:Mozzarella_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
+                                              :IngredientUsage ;
+                                     :IngredientUsageInMeal :GlutenFreePizzaBianca ;
+                                     :UsedIngredient :Mozzarella ;
+                                     :IngredientUsageInGrams 30 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella_In_MargheritaPizza
 :Mozzarella_In_MargheritaPizza rdf:type owl:NamedIndividual ,
                                         :IngredientUsage .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella_In_VegetarianPizza
+:Mozzarella_In_VegetarianPizza rdf:type owl:NamedIndividual ,
+                                        :IngredientUsage ;
+                               :IngredientUsageInMeal :VegetarianPizza ;
+                               :UsedIngredient :Mozzarella ;
+                               :IngredientUsageInGrams 35 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil
@@ -715,6 +685,14 @@
                                         :IngredientUsageInGrams 14 .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil_In_GlutenFreePizzaBianca
+:OliveOil_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
+                                            :IngredientUsage ;
+                                   :IngredientUsageInMeal :GlutenFreePizzaBianca ;
+                                   :UsedIngredient :OliveOil ;
+                                   :IngredientUsageInGrams 15 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil_In_GrilledSalmon
 :OliveOil_In_GrilledSalmon rdf:type owl:NamedIndividual ,
                                     :IngredientUsage ;
@@ -734,6 +712,7 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Pancetta
 :Pancetta rdf:type owl:NamedIndividual ,
                    :Ingredient ;
+          :IngredientNotCompatibleWithFoodTypePreference :Vegetarian ;
           :IngredientHasCalories 541 ;
           :ObjectHasName "Pancetta" .
 
@@ -749,6 +728,7 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ParmesanCheese
 :ParmesanCheese rdf:type owl:NamedIndividual ,
                          :Ingredient ;
+                :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intollerant ;
                 :IngredientHasCalories 431 ;
                 :ObjectHasName "Parmesan Cheese" ;
                 :IngredientIsNotCompatibleWithFoodPreference :Lactose_Intollerant .
@@ -777,6 +757,14 @@
          :ObjectHasName "Parsley" .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Parsley_In_ChickenPiccata
+:Parsley_In_ChickenPiccata rdf:type owl:NamedIndividual ,
+                                    :IngredientUsage ;
+                           :IngredientUsageInMeal :ChickenPiccata ;
+                           :UsedIngredient :Parsley ;
+                           :IngredientUsageInGrams 5 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Parsley_In_PenneArrabbiata
 :Parsley_In_PenneArrabbiata rdf:type owl:NamedIndividual ,
                                      :IngredientUsage ;
@@ -788,6 +776,7 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Penne
 :Penne rdf:type owl:NamedIndividual ,
                 :Ingredient ;
+       :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
        :IngredientHasCalories 131 ;
        :ObjectHasName "Penne" .
 
@@ -809,6 +798,7 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/PizzaDough
 :PizzaDough rdf:type owl:NamedIndividual ,
                      :Ingredient ;
+            :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
             :IngredientHasCalories 265 ;
             :ObjectHasName "Pizza Dough" .
 
@@ -821,6 +811,14 @@
                                :IngredientUsageInGrams 120 .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/PizzaDough_In_VegetarianPizza
+:PizzaDough_In_VegetarianPizza rdf:type owl:NamedIndividual ,
+                                        :IngredientUsage ;
+                               :IngredientUsageInMeal :VegetarianPizza ;
+                               :UsedIngredient :PizzaDough ;
+                               :IngredientUsageInGrams 120 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Quinoa
 :Quinoa rdf:type owl:NamedIndividual ,
                  :Ingredient ;
@@ -828,16 +826,34 @@
         :ObjectHasName "Quinoa" .
 
 
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Quinoa_In_StuffedBellPeppers
+:Quinoa_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
+                                       :IngredientUsage ;
+                              :IngredientUsageInMeal :StuffedBellPeppers ;
+                              :UsedIngredient :Quinoa ;
+                              :IngredientUsageInGrams 100 .
+
+
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Ricotta
 :Ricotta rdf:type owl:NamedIndividual ,
                   :Ingredient ;
+         :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intollerant ;
          :IngredientHasCalories 174 ;
          :ObjectHasName "Ricotta" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Ricotta_In_GlutenFreePizzaBianca
+:Ricotta_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
+                                           :IngredientUsage ;
+                                  :IngredientUsageInMeal :GlutenFreePizzaBianca ;
+                                  :UsedIngredient :Ricotta ;
+                                  :IngredientUsageInGrams 50 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/SalmonFillet
 :SalmonFillet rdf:type owl:NamedIndividual ,
                        :Ingredient ;
+              :IngredientNotCompatibleWithFoodTypePreference :Vegetarian ;
               :IngredientHasCalories 206 ;
               :ObjectHasName "Salmon Fillet" ;
               :IngredientIsNotCompatibleWithFoodPreference :Vegetarian .
@@ -854,6 +870,7 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Spaghetti
 :Spaghetti rdf:type owl:NamedIndividual ,
                     :Ingredient ;
+           :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
            :IngredientHasCalories 131 ;
            :ObjectHasName "Spaghetti" ;
            :IngredientIsNotCompatibleWithFoodPreference :Gluten_Intollerant .
@@ -890,6 +907,7 @@
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ToastedBread
 :ToastedBread rdf:type owl:NamedIndividual ,
                        :Ingredient ;
+              :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
               :IngredientHasCalories 265 ;
               :ObjectHasName "Toasted Bread" ;
               :IngredientIsNotCompatibleWithFoodPreference :Gluten_Intollerant .
@@ -901,6 +919,14 @@
                             :IngredientUsageInMeal :Bruschetta ;
                             :UsedIngredient :ToastedBread ;
                             :IngredientUsageInGrams 28 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Tomaotes_In_StuffedBellPeppers
+:Tomaotes_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
+                                         :IngredientUsage ;
+                                :IngredientUsageInMeal :StuffedBellPeppers ;
+                                :UsedIngredient :Tomato ;
+                                :IngredientUsageInGrams 100 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Tomato
@@ -921,6 +947,14 @@
 :TomatoSauce_In_MargheritaPizza rdf:type owl:NamedIndividual ,
                                          :IngredientUsage ;
                                 :IngredientUsageInMeal :MargheritaPizza ;
+                                :UsedIngredient :TomatoSauce ;
+                                :IngredientUsageInGrams 100 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/TomatoSauce_In_VegetarianPizza
+:TomatoSauce_In_VegetarianPizza rdf:type owl:NamedIndividual ,
+                                         :IngredientUsage ;
+                                :IngredientUsageInMeal :VegetarianPizza ;
                                 :UsedIngredient :TomatoSauce ;
                                 :IngredientUsageInGrams 100 .
 
@@ -965,6 +999,14 @@
                     :Ingredient ;
            :IngredientHasCalories 82 ;
            :ObjectHasName "White Wine" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/WhiteWine_In_ChickenPiccata
+:WhiteWine_In_ChickenPiccata rdf:type owl:NamedIndividual ,
+                                      :IngredientUsage ;
+                             :IngredientUsageInMeal :ChickenPiccata ;
+                             :UsedIngredient :WhiteWine ;
+                             :IngredientUsageInGrams 25 .
 
 
 ###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/glutenFreeFusilli_In_GlutenFreeFusilliPrimavera
