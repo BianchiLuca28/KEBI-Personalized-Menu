@@ -194,6 +194,15 @@ meal(grilled_salmon, [(salmon_fillet, 169), (lemon, 34), (garlic, 7), (olive_oil
 meal(eggplant_parmesan, [(breaded_eggplant, 250), (marinara_sauce, 142), (mozzarella, 35), (parmesan_cheese, 23), (spaghetti, 76)]).
 meal(caprese_salad, [(tomato, 166), (mozzarella, 35), (basil, 22), (olive_oil, 9), (balsamic_glaze, 43)]).
 meal(garlic_bread, [(bread, 56), (garlic, 7), (butter, 14), (parsley, 27)]).
+meal(gluten_free_fusilli_primavera, [(gluten_free_fusilli, 110), (assorted_vegetables, 100), (olive_oil, 14), (garlic, 20)]).
+meal(penne_arrabbiata, [(penne, 110), (tomato, 100), (chili_peppers, 6), (garlic, 20), (parsley,10)]).
+meal(spaghetti_carbonara, [(spaghetti, 100), (eggs, 130), (pancetta, 35), (parmesan_cheese, 20), (black_pepper,5)]).
+
+meal(margherita_pizza, [(pizza_dough, 120), (tomato_sauce, 100), (mozzarella, 35), (basil, 15), (olive_oil,15)]).
+meal(vegetarian_pizza, [(pizza_dough, 120), (tomato_sauce, 100), (mozzarella, 35), (assorted_vegetables, 100)]).
+meal(gluten_free_pizza_bianca, [(gluten_free_pizza_dough, 120), (ricotta, 50), (mozzarella, 30), (garlic, 15),(olive_oil,15)]).
+meal(stuffed_bell_peppers, [(bell_peppers, 120), (quinoa, 100), (black_beans, 90), (corn, 80),(tomato,100), (cheese,35)]).
+meal(chicken_piccata, [(chicken_breast, 120), (lemon, 60), (capers, 20), (white_wine, 25),(parsley,5)]).
 
 
 % Vegetarian meal rule: All ingredients must not be non-vegetarian
