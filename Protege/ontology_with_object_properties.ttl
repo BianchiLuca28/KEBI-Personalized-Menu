@@ -1,12 +1,12 @@
-@prefix : <http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/> .
+@prefix : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/> .
+@base <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology> .
 
-<http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9> rdf:type owl:Ontology .
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology> rdf:type owl:Ontology .
 
 #################################################################
 #    Annotation properties
@@ -16,1005 +16,1126 @@
 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/IngredientIsNotCompatibleWithFoodPreference
-:IngredientIsNotCompatibleWithFoodPreference rdf:type owl:AnnotationProperty .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientIsNotCompatibleWithFoodPreference
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientIsNotCompatibleWithFoodPreference> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GuestHasFoodType
-:GuestHasFoodType rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Guest ;
-                  rdfs:range :GuestFoodPreference .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestHasFoodType
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestHasFoodType> rdf:type owl:ObjectProperty ;
+                                                                                        rdfs:domain <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Guest> ;
+                                                                                        rdfs:range <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodPreference> .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/IngredientNotCompatibleWithFoodTypePreference
-:IngredientNotCompatibleWithFoodTypePreference rdf:type owl:ObjectProperty ;
-                                               rdfs:domain :Ingredient ;
-                                               rdfs:range :GuestFoodTypePreference .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> rdf:type owl:ObjectProperty ;
+                                                                                                                     rdfs:domain <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                                                     rdfs:range <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodTypePreference> .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/IngredientUsageInMeal
-:IngredientUsageInMeal rdf:type owl:ObjectProperty ;
-                       rdfs:domain :IngredientUsage ;
-                       rdfs:range :Meal .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> rdf:type owl:ObjectProperty ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                             rdfs:range <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/MealNotCompatibleWithFoodPreference
-:MealNotCompatibleWithFoodPreference rdf:type owl:ObjectProperty ;
-                                     rdfs:domain :Meal ;
-                                     rdfs:range :GuestFoodPreference .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MealNotCompatibleWithFoodPreference
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MealNotCompatibleWithFoodPreference> rdf:type owl:ObjectProperty ;
+                                                                                                           rdfs:domain <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                                           rdfs:range <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodPreference> .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/UsedIngredient
-:UsedIngredient rdf:type owl:ObjectProperty ;
-                rdfs:domain :IngredientUsage ;
-                rdfs:range :Ingredient .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> rdf:type owl:ObjectProperty ;
+                                                                                      rdfs:domain <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                      rdfs:range <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/IngredientHasCalories
-:IngredientHasCalories rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Ingredient ;
-                       rdfs:range xsd:integer .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> rdf:type owl:DatatypeProperty ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                             rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/IngredientUsageInGrams
-:IngredientUsageInGrams rdf:type owl:DatatypeProperty ;
-                        rdfs:domain :IngredientUsage ;
-                        rdfs:range xsd:integer .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> rdf:type owl:DatatypeProperty ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                              rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/MealHasCalories
-:MealHasCalories rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Meal ;
-                 rdfs:range xsd:integer .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MealHasCalories
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MealHasCalories> rdf:type owl:DatatypeProperty ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                       rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ObjectHasName
-:ObjectHasName rdf:type owl:DatatypeProperty ;
-               rdfs:domain owl:Thing ;
-               rdfs:range xsd:string .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> rdf:type owl:DatatypeProperty ;
+                                                                                     rdfs:domain owl:Thing ;
+                                                                                     rdfs:range xsd:string .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Guest
-:Guest rdf:type owl:Class .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Guest
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Guest> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GuestCaloricPreference
-:GuestCaloricPreference rdf:type owl:Class ;
-                        rdfs:subClassOf :GuestFoodPreference .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestCaloricPreference
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestCaloricPreference> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodPreference> .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GuestFoodPreference
-:GuestFoodPreference rdf:type owl:Class .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodPreference
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodPreference> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GuestFoodTypePreference
-:GuestFoodTypePreference rdf:type owl:Class ;
-                         rdfs:subClassOf :GuestFoodPreference .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodTypePreference
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodTypePreference> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodPreference> .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Ingredient
-:Ingredient rdf:type owl:Class .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/IngredientUsage
-:IngredientUsage rdf:type owl:Class .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Meal
-:Meal rdf:type owl:Class .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> rdf:type owl:Class .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Angelica
-:Angelica rdf:type owl:NamedIndividual ,
-                   :Guest ;
-          :GuestHasFoodType :Gluten_Intollerant .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Angelica
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Angelica> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Guest> ;
+                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestHasFoodType> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant> ;
+                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Angelica" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/AssortedVegetables
-:AssortedVegetables rdf:type owl:NamedIndividual ,
-                             :Ingredient ;
-                    :IngredientHasCalories 50 ;
-                    :ObjectHasName "Assorted Vegetables" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/AssortedVegetables
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/AssortedVegetables> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 50 ;
+                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Assorted Vegetables" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/AssortedVegetables_In_GlutenFreeFusilliPrimavera
-:AssortedVegetables_In_GlutenFreeFusilliPrimavera rdf:type owl:NamedIndividual ,
-                                                           :IngredientUsage ;
-                                                  :IngredientUsageInMeal :GlutenFreeFusilliPrimavera ;
-                                                  :UsedIngredient :AssortedVegetables ;
-                                                  :IngredientUsageInGrams 100 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/AssortedVegetables_In_GlutenFreeFusilliPrimavera
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/AssortedVegetables_In_GlutenFreeFusilliPrimavera> rdf:type owl:NamedIndividual ,
+                                                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreeFusilliPrimavera> ;
+                                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/AssortedVegetables> ;
+                                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 100 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/AssortedVegetables_In_VegetarianPizza
-:AssortedVegetables_In_VegetarianPizza rdf:type owl:NamedIndividual ,
-                                                :IngredientUsage ;
-                                       :IngredientUsageInMeal :VegetarianPizza ;
-                                       :UsedIngredient :AssortedVegetables ;
-                                       :IngredientUsageInGrams 100 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/AssortedVegetables_In_VegetarianPizza
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/AssortedVegetables_In_VegetarianPizza> rdf:type owl:NamedIndividual ,
+                                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/VegetarianPizza> ;
+                                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/AssortedVegetables> ;
+                                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 100 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BalsamicGlaze
-:BalsamicGlaze rdf:type owl:NamedIndividual ,
-                        :Ingredient ;
-               :IngredientHasCalories 80 ;
-               :ObjectHasName "Balsamic Glaze" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BalsamicGlaze
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BalsamicGlaze> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 80 ;
+                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Balsamic Glaze" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BalsamicGlaze_In_CapreseSalad
-:BalsamicGlaze_In_CapreseSalad rdf:type owl:NamedIndividual ,
-                                        :IngredientUsage ;
-                               :IngredientUsageInMeal :CapreseSalad ;
-                               :UsedIngredient :BalsamicGlaze ;
-                               :IngredientUsageInGrams 43 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BalsamicGlaze_In_CapreseSalad
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BalsamicGlaze_In_CapreseSalad> rdf:type owl:NamedIndividual ,
+                                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/CapreseSalad> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BalsamicGlaze> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 43 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Basil
-:Basil rdf:type owl:NamedIndividual ,
-                :Ingredient ;
-       :IngredientHasCalories 22 ;
-       :ObjectHasName "Basil" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Basil
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Basil> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 22 ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Basil" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Basil_In_Bruschetta
-:Basil_In_Bruschetta rdf:type owl:NamedIndividual ,
-                              :IngredientUsage ;
-                     :IngredientUsageInMeal :Bruschetta ;
-                     :UsedIngredient :Basil ;
-                     :IngredientUsageInGrams 22 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Basil_In_Bruschetta
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Basil_In_Bruschetta> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bruschetta> ;
+                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Basil> ;
+                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 22 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Basil_In_CapreseSalad
-:Basil_In_CapreseSalad rdf:type owl:NamedIndividual ,
-                                :IngredientUsage ;
-                       :IngredientUsageInMeal :CapreseSalad ;
-                       :UsedIngredient :Basil ;
-                       :IngredientUsageInGrams 22 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Basil_In_CapreseSalad
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Basil_In_CapreseSalad> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/CapreseSalad> ;
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Basil> ;
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 22 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Basil_In_MargheritaPizza
-:Basil_In_MargheritaPizza rdf:type owl:NamedIndividual ,
-                                   :IngredientUsage ;
-                          :IngredientUsageInMeal :MargheritaPizza ;
-                          :UsedIngredient :Basil ;
-                          :IngredientUsageInGrams 15 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Basil_In_MargheritaPizza
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Basil_In_MargheritaPizza> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MargheritaPizza> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Basil> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 15 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BellPeppers
-:BellPeppers rdf:type owl:NamedIndividual ,
-                      :Ingredient ;
-             :IngredientHasCalories 20 ;
-             :ObjectHasName "Bell Peppers" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BellPeppers
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BellPeppers> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 20 ;
+                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Bell Peppers" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BellPeppers_In_StuffedBellPeppers
-:BellPeppers_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                            :IngredientUsage ;
-                                   :IngredientUsageInMeal :StuffedBellPeppers ;
-                                   :UsedIngredient :BellPeppers ;
-                                   :IngredientUsageInGrams 120 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BellPeppers_In_StuffedBellPeppers
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BellPeppers_In_StuffedBellPeppers> rdf:type owl:NamedIndividual ,
+                                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/StuffedBellPeppers> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BellPeppers> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 120 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BlackBeans
-:BlackBeans rdf:type owl:NamedIndividual ,
-                     :Ingredient ;
-            :IngredientHasCalories 132 ;
-            :ObjectHasName "Black Beans" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BlackBeans
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BlackBeans> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 132 ;
+                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Black Beans" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BlackBeans_In_StuffedBellPeppers
-:BlackBeans_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                           :IngredientUsage ;
-                                  :IngredientUsageInMeal :StuffedBellPeppers ;
-                                  :UsedIngredient :BlackBeans ;
-                                  :IngredientUsageInGrams 90 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BlackBeans_In_StuffedBellPeppers
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BlackBeans_In_StuffedBellPeppers> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/StuffedBellPeppers> ;
+                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BlackBeans> ;
+                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 90 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BlackPepper
-:BlackPepper rdf:type owl:NamedIndividual ,
-                      :Ingredient ;
-             :IngredientHasCalories 255 ;
-             :ObjectHasName "Black Pepper" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BlackPepper
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BlackPepper> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 255 ;
+                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Black Pepper" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BlackPepper_In_SpaghettiCarbonara
-:BlackPepper_In_SpaghettiCarbonara rdf:type owl:NamedIndividual ,
-                                            :IngredientUsage ;
-                                   :IngredientUsageInMeal :SpaghettiCarbonara ;
-                                   :UsedIngredient :BlackPepper ;
-                                   :IngredientUsageInGrams 5 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BlackPepper_In_SpaghettiCarbonara
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BlackPepper_In_SpaghettiCarbonara> rdf:type owl:NamedIndividual ,
+                                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SpaghettiCarbonara> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BlackPepper> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 5 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Bread
-:Bread rdf:type owl:NamedIndividual ,
-                :Ingredient ;
-       :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
-       :IngredientHasCalories 265 ;
-       :ObjectHasName "Bread" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bread
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bread> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant> ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 265 ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Bread" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Bread_In_GarlicBread
-:Bread_In_GarlicBread rdf:type owl:NamedIndividual ,
-                               :IngredientUsage ;
-                      :IngredientUsageInMeal :GarlicBread ;
-                      :UsedIngredient :Bread ;
-                      :IngredientUsageInGrams 56 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bread_In_GarlicBread
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bread_In_GarlicBread> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GarlicBread> ;
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bread> ;
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 56 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BreadedEggplant
-:BreadedEggplant rdf:type owl:NamedIndividual ,
-                          :Ingredient ;
-                 :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
-                 :IngredientHasCalories 120 ;
-                 :ObjectHasName "Breaded Eggplant" ;
-                 :IngredientIsNotCompatibleWithFoodPreference :Gluten_Intollerant .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BreadedEggplant
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BreadedEggplant> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant> ;
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 120 ;
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Breaded Eggplant" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/BreadedEggplant_In_EggplantParmesan
-:BreadedEggplant_In_EggplantParmesan rdf:type owl:NamedIndividual ,
-                                              :IngredientUsage ;
-                                     :IngredientUsageInMeal :EggplantParmesan ;
-                                     :UsedIngredient :BreadedEggplant ;
-                                     :IngredientUsageInGrams 250 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BreadedEggplant_In_EggplantParmesan
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BreadedEggplant_In_EggplantParmesan> rdf:type owl:NamedIndividual ,
+                                                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/EggplantParmesan> ;
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/BreadedEggplant> ;
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 250 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Bruschetta
-:Bruschetta rdf:type owl:NamedIndividual ,
-                     :Meal ;
-            :ObjectHasName "Bruschetta" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bruschetta
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bruschetta> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Bruschetta" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Butter
-:Butter rdf:type owl:NamedIndividual ,
-                 :Ingredient ;
-        :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intollerant ;
-        :IngredientHasCalories 717 ;
-        :ObjectHasName "Butter" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Butter
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Butter> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lactose_Intolerant> ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 717 ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Butter" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Butter_In_GarlicBread
-:Butter_In_GarlicBread rdf:type owl:NamedIndividual ,
-                                :IngredientUsage ;
-                       :IngredientUsageInMeal :GarlicBread .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Butter_In_GarlicBread
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Butter_In_GarlicBread> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GarlicBread> ;
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Butter> ;
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 14 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Calorie_Conscious
-:Calorie_Conscious rdf:type owl:NamedIndividual ,
-                            :GuestCaloricPreference ;
-                   :GuestHasFoodType :Vegetarian .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Calorie_Conscious
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Calorie_Conscious> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestCaloricPreference> .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Capers
-:Capers rdf:type owl:NamedIndividual ,
-                 :Ingredient ;
-        :IngredientHasCalories 23 ;
-        :ObjectHasName "Capers" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Capers
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Capers> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 23 ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Capers" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Capers_In_ChickenPiccata
-:Capers_In_ChickenPiccata rdf:type owl:NamedIndividual ,
-                                   :IngredientUsage ;
-                          :IngredientUsageInMeal :ChickenPiccata ;
-                          :UsedIngredient :Capers ;
-                          :IngredientUsageInGrams 20 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Capers_In_ChickenPiccata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Capers_In_ChickenPiccata> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenPiccata> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Capers> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 20 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/CapreseSalad
-:CapreseSalad rdf:type owl:NamedIndividual ,
-                       :Meal ;
-              :ObjectHasName "Caprese Salad" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/CapreseSalad
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/CapreseSalad> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Caprese Salad" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Cheese
-:Cheese rdf:type owl:NamedIndividual ,
-                 :Ingredient ;
-        :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intollerant ;
-        :IngredientHasCalories 402 ;
-        :ObjectHasName "Cheese" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Cheese
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Cheese> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lactose_Intolerant> ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 402 ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Cheese" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Cheese_In_StuffedBellPeppers
-:Cheese_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                       :IngredientUsage ;
-                              :IngredientUsageInMeal :StuffedBellPeppers ;
-                              :UsedIngredient :Cheese ;
-                              :IngredientUsageInGrams 35 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Cheese_In_StuffedBellPeppers
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Cheese_In_StuffedBellPeppers> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/StuffedBellPeppers> ;
+                                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Cheese> ;
+                                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 35 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ChickenBreast
-:ChickenBreast rdf:type owl:NamedIndividual ,
-                        :Ingredient ;
-               :IngredientNotCompatibleWithFoodTypePreference :Vegetarian ;
-               :IngredientHasCalories 165 ;
-               :ObjectHasName "Chicken Breast" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenBreast
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenBreast> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Vegetarian> ;
+                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 165 ;
+                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Chicken Breast" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ChickenBreast_In_ChickenPiccata
-:ChickenBreast_In_ChickenPiccata rdf:type owl:NamedIndividual ,
-                                          :IngredientUsage ;
-                                 :IngredientUsageInMeal :ChickenPiccata ;
-                                 :UsedIngredient :ChickenBreast ;
-                                 :IngredientUsageInGrams 120 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenBreast_In_ChickenPiccata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenBreast_In_ChickenPiccata> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenPiccata> ;
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenBreast> ;
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 120 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ChickenPiccata
-:ChickenPiccata rdf:type owl:NamedIndividual ,
-                         :Meal ;
-                :ObjectHasName "Chicken Piccata" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenPiccata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenPiccata> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Chicken Piccata" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ChiliPeppers
-:ChiliPeppers rdf:type owl:NamedIndividual ,
-                       :Ingredient ;
-              :IngredientHasCalories 40 ;
-              :ObjectHasName "Chili Peppers" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChiliPeppers
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChiliPeppers> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 40 ;
+                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Chili Peppers" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ChilliPeppers_In_PenneArrabbiata
-:ChilliPeppers_In_PenneArrabbiata rdf:type owl:NamedIndividual ,
-                                           :IngredientUsage ;
-                                  :IngredientUsageInMeal :PenneArrabbiata ;
-                                  :UsedIngredient :ChiliPeppers ;
-                                  :IngredientUsageInGrams 6 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChilliPeppers_In_PenneArrabbiata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChilliPeppers_In_PenneArrabbiata> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PenneArrabbiata> ;
+                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChiliPeppers> ;
+                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 6 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Corn
-:Corn rdf:type owl:NamedIndividual ,
-               :Ingredient ;
-      :IngredientHasCalories 86 ;
-      :ObjectHasName "Corn" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Corn
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Corn> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 86 ;
+                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Corn" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Corn_In_StuffedBellPeppers
-:Corn_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                     :IngredientUsage ;
-                            :IngredientUsageInMeal :StuffedBellPeppers ;
-                            :UsedIngredient :Corn ;
-                            :IngredientUsageInGrams 80 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Corn_In_StuffedBellPeppers
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Corn_In_StuffedBellPeppers> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/StuffedBellPeppers> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Corn> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 80 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/EggplantParmesan
-:EggplantParmesan rdf:type owl:NamedIndividual ,
-                           :Meal ;
-                  :ObjectHasName "Eggplant Parmesan" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/EggplantParmesan
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/EggplantParmesan> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Eggplant Parmesan" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Eggs
-:Eggs rdf:type owl:NamedIndividual ,
-               :Ingredient ;
-      :IngredientNotCompatibleWithFoodTypePreference :Vegetarian ;
-      :IngredientHasCalories 155 ;
-      :ObjectHasName "Eggs" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Eggs
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Eggs> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Vegetarian> ;
+                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 155 ;
+                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Eggs" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Eggs_In_SpaghettiCarbonara
-:Eggs_In_SpaghettiCarbonara rdf:type owl:NamedIndividual ,
-                                     :IngredientUsage ;
-                            :IngredientUsageInMeal :SpaghettiCarbonara ;
-                            :UsedIngredient :Eggs ;
-                            :IngredientUsageInGrams 130 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Eggs_In_SpaghettiCarbonara
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Eggs_In_SpaghettiCarbonara> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SpaghettiCarbonara> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Eggs> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 130 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Fabio
-:Fabio rdf:type owl:NamedIndividual ,
-                :Guest ;
-       :GuestHasFoodType :Calorie_Conscious ,
-                         :Lactose_Intollerant .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Fabio
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Fabio> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Guest> ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestHasFoodType> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Calorie_Conscious> ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Fabio" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Francesco
-:Francesco rdf:type owl:NamedIndividual ,
-                    :Guest ;
-           :GuestHasFoodType :Calorie_Conscious ,
-                             :Gluten_Intollerant ,
-                             :Lactose_Intollerant ,
-                             :Vegetarian .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Francesco
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Francesco> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Guest> ;
+                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestHasFoodType> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Calorie_Conscious> ,
+                                                                                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant> ,
+                                                                                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lactose_Intolerant> ,
+                                                                                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Vegetarian> ;
+                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Francesco" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic
-:Garlic rdf:type owl:NamedIndividual ,
-                 :Ingredient ;
-        :IngredientHasCalories 149 ;
-        :ObjectHasName "Garlic" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 149 ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Garlic" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GarlicBread
-:GarlicBread rdf:type owl:NamedIndividual ,
-                      :Meal ;
-             :ObjectHasName "Garlic Bread" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GarlicBread
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GarlicBread> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Garlic Bread" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic_In_Bruschetta
-:Garlic_In_Bruschetta rdf:type owl:NamedIndividual ,
-                               :IngredientUsage ;
-                      :IngredientUsageInMeal :Bruschetta ;
-                      :UsedIngredient :Garlic ;
-                      :IngredientUsageInGrams 7 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_Bruschetta
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_Bruschetta> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bruschetta> ;
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic> ;
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 7 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic_In_GarlicBread
-:Garlic_In_GarlicBread rdf:type owl:NamedIndividual ,
-                                :IngredientUsage ;
-                       :IngredientUsageInMeal :GarlicBread ;
-                       :UsedIngredient :Garlic ;
-                       :IngredientUsageInGrams 7 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_GarlicBread
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_GarlicBread> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GarlicBread> ;
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic> ;
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 7 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic_In_GlutenFreeFusilliPrimavera
-:Garlic_In_GlutenFreeFusilliPrimavera rdf:type owl:NamedIndividual ,
-                                               :IngredientUsage ;
-                                      :IngredientUsageInMeal :GlutenFreeFusilliPrimavera ;
-                                      :UsedIngredient :Garlic ;
-                                      :IngredientUsageInGrams 20 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_GlutenFreeFusilliPrimavera
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_GlutenFreeFusilliPrimavera> rdf:type owl:NamedIndividual ,
+                                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreeFusilliPrimavera> ;
+                                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic> ;
+                                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 20 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic_In_GlutenFreePizzaBianca
-:Garlic_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
-                                          :IngredientUsage ;
-                                 :IngredientUsageInMeal :GlutenFreePizzaBianca ;
-                                 :UsedIngredient :Garlic ;
-                                 :IngredientUsageInGrams 15 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_GlutenFreePizzaBianca
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_GlutenFreePizzaBianca> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaBianca> ;
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic> ;
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 15 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic_In_GrilledSalmon
-:Garlic_In_GrilledSalmon rdf:type owl:NamedIndividual ,
-                                  :IngredientUsage ;
-                         :IngredientUsageInMeal :GrilledSalmon ;
-                         :UsedIngredient :Garlic ;
-                         :IngredientUsageInGrams 7 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_GrilledSalmon
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_GrilledSalmon> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GrilledSalmon> ;
+                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic> ;
+                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 7 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Garlic_In_PenneArrabbiata
-:Garlic_In_PenneArrabbiata rdf:type owl:NamedIndividual ,
-                                    :IngredientUsage ;
-                           :IngredientUsageInMeal :PenneArrabbiata ;
-                           :UsedIngredient :Garlic ;
-                           :IngredientUsageInGrams 20 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_PenneArrabbiata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic_In_PenneArrabbiata> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PenneArrabbiata> ;
+                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Garlic> ;
+                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 20 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GlutenFreeFusilli
-:GlutenFreeFusilli rdf:type owl:NamedIndividual ,
-                            :Ingredient ;
-                   :IngredientHasCalories 131 ;
-                   :ObjectHasName "Gluten Free Fusili" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreeFusilli
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreeFusilli> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 131 ;
+                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Gluten Free Fusili" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GlutenFreeFusilliPrimavera
-:GlutenFreeFusilliPrimavera rdf:type owl:NamedIndividual ,
-                                     :Meal ;
-                            :ObjectHasName "Gluten Free Fusilli Primavera" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreeFusilliPrimavera
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreeFusilliPrimavera> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Gluten Free Fusilli Primavera" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GlutenFreePizzaBianca
-:GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
-                                :Meal ;
-                       :ObjectHasName "Gluten Free Pizza Bianca" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaBianca
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaBianca> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Gluten Free Pizza Bianca" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GlutenFreePizzaDough
-:GlutenFreePizzaDough rdf:type owl:NamedIndividual ,
-                               :Ingredient ;
-                      :IngredientHasCalories 265 ;
-                      :ObjectHasName "Gluten Free Pizza Dough" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaDough
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaDough> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 265 ;
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Gluten Free Pizza Dough" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GlutenFreePizzaDough_In_GlutenFreePizzaBianca
-:GlutenFreePizzaDough_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
-                                                        :IngredientUsage ;
-                                               :IngredientUsageInMeal :GlutenFreePizzaBianca ;
-                                               :UsedIngredient :GlutenFreePizzaDough ;
-                                               :IngredientUsageInGrams 120 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaDough_In_GlutenFreePizzaBianca
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaDough_In_GlutenFreePizzaBianca> rdf:type owl:NamedIndividual ,
+                                                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaBianca> ;
+                                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaDough> ;
+                                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 120 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Gluten_Intollerant
-:Gluten_Intollerant rdf:type owl:NamedIndividual ,
-                             :GuestFoodTypePreference .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodTypePreference> .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/GrilledSalmon
-:GrilledSalmon rdf:type owl:NamedIndividual ,
-                        :Meal ;
-               :ObjectHasName "Grilled Salmon" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GrilledSalmon
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GrilledSalmon> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Grilled Salmon" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Herbs
-:Herbs rdf:type owl:NamedIndividual ,
-                :Ingredient ;
-       :IngredientHasCalories "Herbs" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Herbs
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Herbs> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 40 ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Herbs" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Herbs_In_GrilledSalmon
-:Herbs_In_GrilledSalmon rdf:type owl:NamedIndividual ,
-                                 :IngredientUsage ;
-                        :IngredientUsageInMeal :GrilledSalmon ;
-                        :UsedIngredient :Herbs ;
-                        :IngredientUsageInGrams 200 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Herbs_In_GrilledSalmon
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Herbs_In_GrilledSalmon> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GrilledSalmon> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Herbs> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 200 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Lactose_Intollerant
-:Lactose_Intollerant rdf:type owl:NamedIndividual ,
-                              :GuestFoodTypePreference .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lactose_Intolerant
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lactose_Intolerant> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodTypePreference> .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Lemon
-:Lemon rdf:type owl:NamedIndividual ,
-                :Ingredient ;
-       :IngredientHasCalories 29 ;
-       :ObjectHasName "Lemon" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lemon
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lemon> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 29 ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Lemon" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Lemon_In_ChickenPiccata
-:Lemon_In_ChickenPiccata rdf:type owl:NamedIndividual ,
-                                  :IngredientUsage ;
-                         :IngredientUsageInMeal :ChickenPiccata ;
-                         :UsedIngredient :Lemon ;
-                         :IngredientUsageInGrams 60 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lemon_In_ChickenPiccata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lemon_In_ChickenPiccata> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenPiccata> ;
+                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lemon> ;
+                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 60 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Lemon_In_GrilledSalmon
-:Lemon_In_GrilledSalmon rdf:type owl:NamedIndividual ,
-                                 :IngredientUsage ;
-                        :IngredientUsageInMeal :GrilledSalmon ;
-                        :UsedIngredient :Lemon ;
-                        :IngredientUsageInGrams 34 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lemon_In_GrilledSalmon
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lemon_In_GrilledSalmon> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GrilledSalmon> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lemon> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 34 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Luca
-:Luca rdf:type owl:NamedIndividual ,
-               :Guest ;
-      :GuestHasFoodType :Lactose_Intollerant ,
-                        :Vegetarian ;
-      :ObjectHasName "Luca" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Luca
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Luca> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Guest> ;
+                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestHasFoodType> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lactose_Intolerant> ,
+                                                                                                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Vegetarian> ;
+                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Luca" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/MargheritaPizza
-:MargheritaPizza rdf:type owl:NamedIndividual ,
-                          :Meal ;
-                 :ObjectHasName "Margherita Pizza" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MargheritaPizza
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MargheritaPizza> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Margherita Pizza" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/MarinaraSauce
-:MarinaraSauce rdf:type owl:NamedIndividual ,
-                        :Ingredient ;
-               :IngredientHasCalories 70 ;
-               :ObjectHasName "Marinara Sauce" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MarinaraSauce
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MarinaraSauce> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 70 ;
+                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Marinara Sauce" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/MarinaraSauce_In_EggplantParmesan
-:MarinaraSauce_In_EggplantParmesan rdf:type owl:NamedIndividual ,
-                                            :IngredientUsage ;
-                                   :IngredientUsageInMeal :EggplantParmesan ;
-                                   :UsedIngredient :MarinaraSauce ;
-                                   :IngredientUsageInGrams 142 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MarinaraSauce_In_EggplantParmesan
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MarinaraSauce_In_EggplantParmesan> rdf:type owl:NamedIndividual ,
+                                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/EggplantParmesan> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MarinaraSauce> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 142 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Michele
-:Michele rdf:type owl:NamedIndividual ,
-                  :Guest .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Michele
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Michele> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Guest> ;
+                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Michele" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella
-:Mozzarella rdf:type owl:NamedIndividual ,
-                     :Ingredient ;
-            :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intollerant ;
-            :IngredientHasCalories 280 ;
-            :ObjectHasName "Mozzarella" ;
-            :IngredientIsNotCompatibleWithFoodPreference :Lactose_Intollerant .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lactose_Intolerant> ;
+                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 280 ;
+                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Mozzarella" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella_In_CapreseSalad
-:Mozzarella_In_CapreseSalad rdf:type owl:NamedIndividual ,
-                                     :IngredientUsage ;
-                            :IngredientUsageInMeal :CapreseSalad ;
-                            :UsedIngredient :Mozzarella ;
-                            :IngredientUsageInGrams 35 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella_In_CapreseSalad
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella_In_CapreseSalad> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/CapreseSalad> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 35 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella_In_EggplantParmesan
-:Mozzarella_In_EggplantParmesan rdf:type owl:NamedIndividual ,
-                                         :IngredientUsage ;
-                                :IngredientUsageInMeal :EggplantParmesan ;
-                                :UsedIngredient :Mozzarella ;
-                                :IngredientUsageInGrams 35 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella_In_EggplantParmesan
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella_In_EggplantParmesan> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/EggplantParmesan> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 35 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella_In_GlutenFreePizzaBianca
-:Mozzarella_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
-                                              :IngredientUsage ;
-                                     :IngredientUsageInMeal :GlutenFreePizzaBianca ;
-                                     :UsedIngredient :Mozzarella ;
-                                     :IngredientUsageInGrams 30 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella_In_GlutenFreePizzaBianca
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella_In_GlutenFreePizzaBianca> rdf:type owl:NamedIndividual ,
+                                                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaBianca> ;
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella> ;
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 30 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella_In_MargheritaPizza
-:Mozzarella_In_MargheritaPizza rdf:type owl:NamedIndividual ,
-                                        :IngredientUsage .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella_In_MargheritaPizza
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella_In_MargheritaPizza> rdf:type owl:NamedIndividual ,
+                                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MargheritaPizza> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 35 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Mozzarella_In_VegetarianPizza
-:Mozzarella_In_VegetarianPizza rdf:type owl:NamedIndividual ,
-                                        :IngredientUsage ;
-                               :IngredientUsageInMeal :VegetarianPizza ;
-                               :UsedIngredient :Mozzarella ;
-                               :IngredientUsageInGrams 35 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella_In_VegetarianPizza
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella_In_VegetarianPizza> rdf:type owl:NamedIndividual ,
+                                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/VegetarianPizza> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Mozzarella> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 35 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil
-:OliveOil rdf:type owl:NamedIndividual ,
-                   :Ingredient ;
-          :IngredientHasCalories 884 ;
-          :ObjectHasName "Olive Oil" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 884 ;
+                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Olive Oil" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil_In_Bruschetta
-:OliveOil_In_Bruschetta rdf:type owl:NamedIndividual ,
-                                 :IngredientUsage ;
-                        :IngredientUsageInMeal :Bruschetta ;
-                        :UsedIngredient :OliveOil ;
-                        :IngredientUsageInGrams 9 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_Bruschetta
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_Bruschetta> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bruschetta> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 9 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil_In_CapreseSalad
-:OliveOil_In_CapreseSalad rdf:type owl:NamedIndividual ,
-                                   :IngredientUsage ;
-                          :IngredientUsageInMeal :CapreseSalad ;
-                          :UsedIngredient :OliveOil ;
-                          :IngredientUsageInGrams 9 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_CapreseSalad
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_CapreseSalad> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/CapreseSalad> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 9 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil_In_GlutenFreeFusilliPrimavera
-:OliveOil_In_GlutenFreeFusilliPrimavera rdf:type owl:NamedIndividual ,
-                                                 :IngredientUsage ;
-                                        :IngredientUsageInMeal :GlutenFreeFusilliPrimavera ;
-                                        :UsedIngredient :OliveOil ;
-                                        :IngredientUsageInGrams 14 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_GlutenFreeFusilliPrimavera
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_GlutenFreeFusilliPrimavera> rdf:type owl:NamedIndividual ,
+                                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreeFusilliPrimavera> ;
+                                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil> ;
+                                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 14 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil_In_GlutenFreePizzaBianca
-:OliveOil_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
-                                            :IngredientUsage ;
-                                   :IngredientUsageInMeal :GlutenFreePizzaBianca ;
-                                   :UsedIngredient :OliveOil ;
-                                   :IngredientUsageInGrams 15 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_GlutenFreePizzaBianca
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_GlutenFreePizzaBianca> rdf:type owl:NamedIndividual ,
+                                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaBianca> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil> ;
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 15 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil_In_GrilledSalmon
-:OliveOil_In_GrilledSalmon rdf:type owl:NamedIndividual ,
-                                    :IngredientUsage ;
-                           :IngredientUsageInMeal :GrilledSalmon ;
-                           :UsedIngredient :OliveOil ;
-                           :IngredientUsageInGrams 11 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_GrilledSalmon
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_GrilledSalmon> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GrilledSalmon> ;
+                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil> ;
+                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 11 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/OliveOil_In_MargheritaPizza
-:OliveOil_In_MargheritaPizza rdf:type owl:NamedIndividual ,
-                                      :IngredientUsage ;
-                             :IngredientUsageInMeal :MargheritaPizza ;
-                             :UsedIngredient :OliveOil ;
-                             :IngredientUsageInGrams 15 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_MargheritaPizza
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil_In_MargheritaPizza> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MargheritaPizza> ;
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/OliveOil> ;
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 15 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Pancetta
-:Pancetta rdf:type owl:NamedIndividual ,
-                   :Ingredient ;
-          :IngredientNotCompatibleWithFoodTypePreference :Vegetarian ;
-          :IngredientHasCalories 541 ;
-          :ObjectHasName "Pancetta" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Pancetta
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Pancetta> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Vegetarian> ;
+                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 541 ;
+                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Pancetta" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Pancetta_In_SpaghettiCarbonara
-:Pancetta_In_SpaghettiCarbonara rdf:type owl:NamedIndividual ,
-                                         :IngredientUsage ;
-                                :IngredientUsageInMeal :SpaghettiCarbonara ;
-                                :UsedIngredient :Pancetta ;
-                                :IngredientUsageInGrams 35 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Pancetta_In_SpaghettiCarbonara
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Pancetta_In_SpaghettiCarbonara> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SpaghettiCarbonara> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Pancetta> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 35 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ParmesanCheese
-:ParmesanCheese rdf:type owl:NamedIndividual ,
-                         :Ingredient ;
-                :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intollerant ;
-                :IngredientHasCalories 431 ;
-                :ObjectHasName "Parmesan Cheese" ;
-                :IngredientIsNotCompatibleWithFoodPreference :Lactose_Intollerant .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ParmesanCheese
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ParmesanCheese> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lactose_Intolerant> ;
+                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 431 ;
+                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Parmesan Cheese" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ParmesanCheese_In_EggplantParmesan
-:ParmesanCheese_In_EggplantParmesan rdf:type owl:NamedIndividual ,
-                                             :IngredientUsage ;
-                                    :IngredientUsageInMeal :EggplantParmesan ;
-                                    :UsedIngredient :ParmesanCheese ;
-                                    :IngredientUsageInGrams 23 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ParmesanCheese_In_EggplantParmesan
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ParmesanCheese_In_EggplantParmesan> rdf:type owl:NamedIndividual ,
+                                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/EggplantParmesan> ;
+                                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ParmesanCheese> ;
+                                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 23 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ParmesanCheese_In_SpaghettiCarbonara
-:ParmesanCheese_In_SpaghettiCarbonara rdf:type owl:NamedIndividual ,
-                                               :IngredientUsage ;
-                                      :IngredientUsageInMeal :SpaghettiCarbonara ;
-                                      :UsedIngredient :ParmesanCheese ;
-                                      :IngredientUsageInGrams 20 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ParmesanCheese_In_SpaghettiCarbonara
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ParmesanCheese_In_SpaghettiCarbonara> rdf:type owl:NamedIndividual ,
+                                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SpaghettiCarbonara> ;
+                                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ParmesanCheese> ;
+                                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 20 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Parsley
-:Parsley rdf:type owl:NamedIndividual ,
-                  :Ingredient ;
-         :IngredientHasCalories 36 ;
-         :ObjectHasName "Parsley" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Parsley
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Parsley> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 36 ;
+                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Parsley" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Parsley_In_ChickenPiccata
-:Parsley_In_ChickenPiccata rdf:type owl:NamedIndividual ,
-                                    :IngredientUsage ;
-                           :IngredientUsageInMeal :ChickenPiccata ;
-                           :UsedIngredient :Parsley ;
-                           :IngredientUsageInGrams 5 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Parsley_In_ChickenPiccata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Parsley_In_ChickenPiccata> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenPiccata> ;
+                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Parsley> ;
+                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 5 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Parsley_In_PenneArrabbiata
-:Parsley_In_PenneArrabbiata rdf:type owl:NamedIndividual ,
-                                     :IngredientUsage ;
-                            :IngredientUsageInMeal :PenneArrabbiata ;
-                            :UsedIngredient :Parsley ;
-                            :IngredientUsageInGrams 10 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Parsley_In_PenneArrabbiata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Parsley_In_PenneArrabbiata> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PenneArrabbiata> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Parsley> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 10 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Penne
-:Penne rdf:type owl:NamedIndividual ,
-                :Ingredient ;
-       :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
-       :IngredientHasCalories 131 ;
-       :ObjectHasName "Penne" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Penne
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Penne> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant> ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 131 ;
+                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Penne" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/PenneArrabbiata
-:PenneArrabbiata rdf:type owl:NamedIndividual ,
-                          :Meal ;
-                 :ObjectHasName "Penne Arrabbiata" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PenneArrabbiata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PenneArrabbiata> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Penne Arrabbiata" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Penne_In_PenneArrabbiata
-:Penne_In_PenneArrabbiata rdf:type owl:NamedIndividual ,
-                                   :IngredientUsage ;
-                          :IngredientUsageInMeal :PenneArrabbiata ;
-                          :UsedIngredient :Penne ;
-                          :IngredientUsageInGrams 110 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Penne_In_PenneArrabbiata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Penne_In_PenneArrabbiata> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PenneArrabbiata> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Penne> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 110 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/PizzaDough
-:PizzaDough rdf:type owl:NamedIndividual ,
-                     :Ingredient ;
-            :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
-            :IngredientHasCalories 265 ;
-            :ObjectHasName "Pizza Dough" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PizzaDough
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PizzaDough> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant> ;
+                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 265 ;
+                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Pizza Dough" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/PizzaDough_In_MargheritaPizza
-:PizzaDough_In_MargheritaPizza rdf:type owl:NamedIndividual ,
-                                        :IngredientUsage ;
-                               :IngredientUsageInMeal :MargheritaPizza ;
-                               :UsedIngredient :PizzaDough ;
-                               :IngredientUsageInGrams 120 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PizzaDough_In_MargheritaPizza
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PizzaDough_In_MargheritaPizza> rdf:type owl:NamedIndividual ,
+                                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MargheritaPizza> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PizzaDough> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 120 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/PizzaDough_In_VegetarianPizza
-:PizzaDough_In_VegetarianPizza rdf:type owl:NamedIndividual ,
-                                        :IngredientUsage ;
-                               :IngredientUsageInMeal :VegetarianPizza ;
-                               :UsedIngredient :PizzaDough ;
-                               :IngredientUsageInGrams 120 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PizzaDough_In_VegetarianPizza
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PizzaDough_In_VegetarianPizza> rdf:type owl:NamedIndividual ,
+                                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/VegetarianPizza> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PizzaDough> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 120 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Quinoa
-:Quinoa rdf:type owl:NamedIndividual ,
-                 :Ingredient ;
-        :IngredientHasCalories 120 ;
-        :ObjectHasName "Quinoa" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Quinoa
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Quinoa> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 120 ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Quinoa" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Quinoa_In_StuffedBellPeppers
-:Quinoa_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                       :IngredientUsage ;
-                              :IngredientUsageInMeal :StuffedBellPeppers ;
-                              :UsedIngredient :Quinoa ;
-                              :IngredientUsageInGrams 100 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Quinoa_In_StuffedBellPeppers
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Quinoa_In_StuffedBellPeppers> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/StuffedBellPeppers> ;
+                                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Quinoa> ;
+                                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 100 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Ricotta
-:Ricotta rdf:type owl:NamedIndividual ,
-                  :Ingredient ;
-         :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intollerant ;
-         :IngredientHasCalories 174 ;
-         :ObjectHasName "Ricotta" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ricotta
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ricotta> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lactose_Intolerant> ;
+                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 174 ;
+                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Ricotta" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Ricotta_In_GlutenFreePizzaBianca
-:Ricotta_In_GlutenFreePizzaBianca rdf:type owl:NamedIndividual ,
-                                           :IngredientUsage ;
-                                  :IngredientUsageInMeal :GlutenFreePizzaBianca ;
-                                  :UsedIngredient :Ricotta ;
-                                  :IngredientUsageInGrams 50 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ricotta_In_GlutenFreePizzaBianca
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ricotta_In_GlutenFreePizzaBianca> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreePizzaBianca> ;
+                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ricotta> ;
+                                                                                                        <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 50 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/SalmonFillet
-:SalmonFillet rdf:type owl:NamedIndividual ,
-                       :Ingredient ;
-              :IngredientNotCompatibleWithFoodTypePreference :Vegetarian ;
-              :IngredientHasCalories 206 ;
-              :ObjectHasName "Salmon Fillet" ;
-              :IngredientIsNotCompatibleWithFoodPreference :Vegetarian .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SalmonFillet
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SalmonFillet> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Vegetarian> ;
+                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 206 ;
+                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Salmon Fillet" ;
+                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientIsNotCompatibleWithFoodPreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Vegetarian> .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/SalmonFillet_In_GrilledSalmon
-:SalmonFillet_In_GrilledSalmon rdf:type owl:NamedIndividual ,
-                                        :IngredientUsage ;
-                               :IngredientUsageInMeal :GrilledSalmon ;
-                               :UsedIngredient :SalmonFillet ;
-                               :IngredientUsageInGrams 169 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SalmonFillet_In_GrilledSalmon
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SalmonFillet_In_GrilledSalmon> rdf:type owl:NamedIndividual ,
+                                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GrilledSalmon> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SalmonFillet> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 169 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Spaghetti
-:Spaghetti rdf:type owl:NamedIndividual ,
-                    :Ingredient ;
-           :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
-           :IngredientHasCalories 131 ;
-           :ObjectHasName "Spaghetti" ;
-           :IngredientIsNotCompatibleWithFoodPreference :Gluten_Intollerant .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Spaghetti
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Spaghetti> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant> ;
+                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 131 ;
+                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Spaghetti" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/SpaghettiCarbonara
-:SpaghettiCarbonara rdf:type owl:NamedIndividual ,
-                             :Meal ;
-                    :ObjectHasName "Spaghetti Carbonara" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SpaghettiCarbonara
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SpaghettiCarbonara> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Spaghetti Carbonara" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Spaghetti_In_EggplantParmesan
-:Spaghetti_In_EggplantParmesan rdf:type owl:NamedIndividual ,
-                                        :IngredientUsage ;
-                               :IngredientUsageInMeal :EggplantParmesan ;
-                               :UsedIngredient :Spaghetti ;
-                               :IngredientUsageInGrams 76 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Spaghetti_In_EggplantParmesan
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Spaghetti_In_EggplantParmesan> rdf:type owl:NamedIndividual ,
+                                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/EggplantParmesan> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Spaghetti> ;
+                                                                                                     <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 76 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Spaghetti_In_SpaghettiCarbonara
-:Spaghetti_In_SpaghettiCarbonara rdf:type owl:NamedIndividual ,
-                                          :IngredientUsage ;
-                                 :IngredientUsageInMeal :SpaghettiCarbonara ;
-                                 :UsedIngredient :Spaghetti ;
-                                 :IngredientUsageInGrams 100 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Spaghetti_In_SpaghettiCarbonara
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Spaghetti_In_SpaghettiCarbonara> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/SpaghettiCarbonara> ;
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Spaghetti> ;
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 100 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/StuffedBellPeppers
-:StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                             :Meal ;
-                    :ObjectHasName "Stuffed Bell Peppers" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/StuffedBellPeppers
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/StuffedBellPeppers> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Stuffed Bell Peppers" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ToastedBread
-:ToastedBread rdf:type owl:NamedIndividual ,
-                       :Ingredient ;
-              :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intollerant ;
-              :IngredientHasCalories 265 ;
-              :ObjectHasName "Toasted Bread" ;
-              :IngredientIsNotCompatibleWithFoodPreference :Gluten_Intollerant .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ToastedBread
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ToastedBread> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant> ;
+                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 265 ;
+                                                                                    <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Toasted Bread" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/ToastedBread_In_Bruschetta
-:ToastedBread_In_Bruschetta rdf:type owl:NamedIndividual ,
-                                     :IngredientUsage ;
-                            :IngredientUsageInMeal :Bruschetta ;
-                            :UsedIngredient :ToastedBread ;
-                            :IngredientUsageInGrams 28 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ToastedBread_In_Bruschetta
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ToastedBread_In_Bruschetta> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bruschetta> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ToastedBread> ;
+                                                                                                  <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 28 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Tomaotes_In_StuffedBellPeppers
-:Tomaotes_In_StuffedBellPeppers rdf:type owl:NamedIndividual ,
-                                         :IngredientUsage ;
-                                :IngredientUsageInMeal :StuffedBellPeppers ;
-                                :UsedIngredient :Tomato ;
-                                :IngredientUsageInGrams 100 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomaotes_In_StuffedBellPeppers
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomaotes_In_StuffedBellPeppers> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/StuffedBellPeppers> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomato> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 100 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Tomato
-:Tomato rdf:type owl:NamedIndividual ,
-                 :Ingredient ;
-        :IngredientHasCalories 18 ;
-        :ObjectHasName "Tomato" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomato
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomato> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 18 ;
+                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Tomato" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/TomatoSauce
-:TomatoSauce rdf:type owl:NamedIndividual ,
-                      :Ingredient ;
-             :IngredientHasCalories 29 ;
-             :ObjectHasName "Tomato Sauce" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/TomatoSauce
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/TomatoSauce> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 29 ;
+                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Tomato Sauce" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/TomatoSauce_In_MargheritaPizza
-:TomatoSauce_In_MargheritaPizza rdf:type owl:NamedIndividual ,
-                                         :IngredientUsage ;
-                                :IngredientUsageInMeal :MargheritaPizza ;
-                                :UsedIngredient :TomatoSauce ;
-                                :IngredientUsageInGrams 100 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/TomatoSauce_In_MargheritaPizza
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/TomatoSauce_In_MargheritaPizza> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MargheritaPizza> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/TomatoSauce> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 100 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/TomatoSauce_In_VegetarianPizza
-:TomatoSauce_In_VegetarianPizza rdf:type owl:NamedIndividual ,
-                                         :IngredientUsage ;
-                                :IngredientUsageInMeal :VegetarianPizza ;
-                                :UsedIngredient :TomatoSauce ;
-                                :IngredientUsageInGrams 100 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/TomatoSauce_In_VegetarianPizza
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/TomatoSauce_In_VegetarianPizza> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/VegetarianPizza> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/TomatoSauce> ;
+                                                                                                      <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 100 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Tomatoes_In_Bruschetta
-:Tomatoes_In_Bruschetta rdf:type owl:NamedIndividual ,
-                                 :IngredientUsage ;
-                        :IngredientUsageInMeal :Bruschetta ;
-                        :UsedIngredient :Tomato ;
-                        :IngredientUsageInGrams 166 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomatoes_In_Bruschetta
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomatoes_In_Bruschetta> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Bruschetta> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomato> ;
+                                                                                              <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 166 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Tomatoes_In_CapreseSalad
-:Tomatoes_In_CapreseSalad rdf:type owl:NamedIndividual ,
-                                   :IngredientUsage ;
-                          :IngredientUsageInMeal :CapreseSalad ;
-                          :UsedIngredient :Tomato ;
-                          :IngredientUsageInGrams 166 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomatoes_In_CapreseSalad
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomatoes_In_CapreseSalad> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/CapreseSalad> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomato> ;
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 166 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Tomatoes_In_PenneArrabbiata
-:Tomatoes_In_PenneArrabbiata rdf:type owl:NamedIndividual ,
-                                      :IngredientUsage ;
-                             :IngredientUsageInMeal :PenneArrabbiata ;
-                             :UsedIngredient :Tomato ;
-                             :IngredientUsageInGrams 100 .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomatoes_In_PenneArrabbiata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomatoes_In_PenneArrabbiata> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/PenneArrabbiata> ;
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Tomato> ;
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 100 .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/Vegetarian
-:Vegetarian rdf:type owl:NamedIndividual ,
-                     :GuestFoodTypePreference .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Vegetarian
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Vegetarian> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GuestFoodTypePreference> .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/VegetarianPizza
-:VegetarianPizza rdf:type owl:NamedIndividual ,
-                          :Meal ;
-                 :ObjectHasName "Vegetarian Pizza" .
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/VegetarianPizza
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/VegetarianPizza> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Meal> ;
+                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "Vegetarian Pizza" .
 
 
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/WhiteWine
-:WhiteWine rdf:type owl:NamedIndividual ,
-                    :Ingredient ;
-           :IngredientHasCalories 82 ;
-           :ObjectHasName "White Wine" .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/WhiteWine_In_ChickenPiccata
-:WhiteWine_In_ChickenPiccata rdf:type owl:NamedIndividual ,
-                                      :IngredientUsage ;
-                             :IngredientUsageInMeal :ChickenPiccata ;
-                             :UsedIngredient :WhiteWine ;
-                             :IngredientUsageInGrams 25 .
-
-
-###  http://www.semanticweb.org/utente/ontologies/2024/5/untitled-ontology-9/glutenFreeFusilli_In_GlutenFreeFusilliPrimavera
-:glutenFreeFusilli_In_GlutenFreeFusilliPrimavera rdf:type owl:NamedIndividual ,
-                                                          :IngredientUsage ;
-                                                 :IngredientUsageInMeal :GlutenFreeFusilliPrimavera ;
-                                                 :UsedIngredient :GlutenFreeFusilli ;
-                                                 :IngredientUsageInGrams 110 .
-
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/WhiteWine
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/WhiteWine> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Ingredient> ;
+                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientHasCalories> 82 ;
+                                                                                 <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ObjectHasName> "White Wine" .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/WhiteWine_In_ChickenPiccata
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/WhiteWine_In_ChickenPiccata> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/ChickenPiccata> ;
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/WhiteWine> ;
+                                                                                                   <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 25 .
+
+
+###  http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/glutenFreeFusilli_In_GlutenFreeFusilliPrimavera
+<http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/glutenFreeFusilli_In_GlutenFreeFusilliPrimavera> rdf:type owl:NamedIndividual ,
+                                                                                                                                <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsage> ;
+                                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreeFusilliPrimavera> ;
+                                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/GlutenFreeFusilli> ;
+                                                                                                                       <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInGrams> 110 .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:ingredientUsage rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:meal rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:ingredient rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Checks if meals are not compatible with the gluten intolerant food preference" ;
+   rdfs:label "Gluten Intolerant Non Compatible With Meals" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :ingredientUsage ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :meal
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :ingredientUsage ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :ingredient
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :ingredient ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MealNotCompatibleWithFoodPreference> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :meal ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Gluten_Intolerant>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Checks if meals are not compatible with the lactose intolerant food preference" ;
+   rdfs:label "Lactose Intolerant Non Compatible Meals" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :ingredientUsage ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :meal
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :ingredientUsage ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :ingredient
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :ingredient ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lactose_Intolerant>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MealNotCompatibleWithFoodPreference> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :meal ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Lactose_Intolerant>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Checks if meals are not compatible with the vegetarian food preference" ;
+   rdfs:label "Vegetarian Non Compatible Meals" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientUsageInMeal> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :ingredientUsage ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :meal
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/UsedIngredient> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :ingredientUsage ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :ingredient
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/IngredientNotCompatibleWithFoodTypePreference> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :ingredient ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Vegetarian>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/MealNotCompatibleWithFoodPreference> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :meal ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/Vegetarian>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

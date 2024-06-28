@@ -121,7 +121,7 @@ vegetarian_meal(Meal) :-
 % Carnivore meal rule: Must not be vegetarian
 carnivore_meal(Meal) :-
     meal(Meal, Ingredients),
-    member((Ingredient, _), Ingredients), non_vegetarian(Ingredient).
+    once((member((Ingredient, _), Ingredients), non_vegetarian(Ingredient))).
 
 
 % Gluten-free meal rule: Must not contain gluten-containing grains
@@ -150,13 +150,23 @@ calorie_conscious_meal(Meal) :-
     calorie_threshold(Threshold),
     TotalCalories =< Threshold.
 
-% Recommend meals based on guest preferences
-recommend_meal(vegetarian, Meal) :- vegetarian_meal(Meal).
-recommend_meal(carnivore, Meal) :- carnivore_meal(Meal).
-recommend_meal(calorie_conscious, Meal) :- calorie_conscious_meal(Meal).
-recommend_meal(gluten_intolerant, Meal) :- gluten_free_meal(Meal).
-recommend_meal(lactose_intolerant, Meal) :- lactose_free_meal(Meal).
-    
+% Preference checking predicate that will help with the meal list recommendation
+preference_meal(vegetarian, Meal) :- vegetarian_meal(Meal).
+preference_meal(lactose_intolerant, Meal) :- lactose_free_meal(Meal).
+preference_meal(gluten_intolerant, Meal) :- gluten_free_meal(Meal).
+preference_meal(calorie_conscious, Meal) :- calorie_conscious_meal(Meal).
+preference_meal(carnivore, Meal) :- carnivore_meal(Meal).
+
+% Check if a meal satisfies all preferences in a list
+meal_compliant_with_preferences(Meal, []).
+meal_compliant_with_preferences(Meal, [Preference | Rest]) :-
+    preference_meal(Preference, Meal),
+    meal_compliant_with_preferences(Meal, Rest).
+
+% Collect meals that are compliant with all given preferences
+collect_meals([], []) :- !.
+collect_meals(Preferences, Meals) :-
+    findall(Meal, (meal(Meal, _), meal_compliant_with_preferences(Meal, Preferences)), Meals).    
 
 % Some queries:
 % ?- vegetarian_meal(Meal).
@@ -165,8 +175,7 @@ recommend_meal(lactose_intolerant, Meal) :- lactose_free_meal(Meal).
 % ?- gluten_free_meal(Meal).
 % ?- lactose_free_meal(Meal).
 
-% ?- recommend_meal(vegetarian, Meal).
-% ?- recommend_meal(carnivore, Meal).
-% ?- recommend_meal(calorie_conscious, Meal).
-% ?- recommend_meal(gluten_intolerant, Meal).
-% ?- recommend_meal(lactose_intolerant, Meal).
+% ?- collect_meals([vegetarian], Meal).
+% ?- collect_meals([carnivore, gluten_intolerant], Meal).
+% ?- collect_meals([lactose_intolerant, calorie_conscious], Meal).
+

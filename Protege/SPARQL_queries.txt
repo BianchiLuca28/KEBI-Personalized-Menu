@@ -1,0 +1,176 @@
+# Retrieve Ingredients and Calories
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?ingredient ?name ?calories
+WHERE {
+    ?ingredient rdf:type :Ingredient ;
+    			:ObjectHasName ?name ;
+    			:IngredientHasCalories ?calories;
+}
+
+
+# Retrieve the Total Calories of a Meal
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+
+SELECT ?meal (SUM(?calories) AS ?totalCalories)
+WHERE {
+    ?usage :IngredientUsageInMeal ?meal ;
+           :UsedIngredient ?ingredient ;
+           :IngredientUsageInGrams ?quantity .
+    
+    ?ingredient :IngredientHasCalories ?caloriesPer100Grams .
+    
+    BIND((?caloriesPer100Grams / 100.0) * ?quantity AS ?calories)
+}
+GROUP BY ?meal
+
+
+# Retrieve Calorie-Conscious Meals
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+
+SELECT ?meal (SUM(?calories) AS ?totalCalories)
+WHERE {
+    ?usage :IngredientUsageInMeal ?meal ;
+            :UsedIngredient ?ingredient ;
+            :IngredientUsageInGrams ?quantity .
+    
+    ?ingredient :IngredientHasCalories ?caloriesPer100Grams .
+    
+    BIND((?caloriesPer100Grams / 100.0) * ?quantity AS ?calories)
+}
+GROUP BY ?meal
+HAVING (SUM(?calories) <= 550)
+
+
+# Retrieve Vegetarian Meals
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?meal
+WHERE {
+  ?meal rdf:type :Meal .
+  FILTER NOT EXISTS {
+    ?usage :IngredientUsageInMeal ?meal ;
+    		 :UsedIngredient ?ingredient .
+    ?ingredient :IngredientNotCompatibleWithFoodTypePreference :Vegetarian .
+  }
+}
+
+
+# Retrieve Lactose Free Meals
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?meal
+WHERE {
+  ?meal rdf:type :Meal .
+  FILTER NOT EXISTS {
+    ?usage :IngredientUsageInMeal ?meal ;
+    		 :UsedIngredient ?ingredient .
+    ?ingredient :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intolerant .
+  }
+}
+
+
+# Retrieve Gluten Free Meals
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?meal
+WHERE {
+  ?meal rdf:type :Meal .
+  FILTER NOT EXISTS {
+    ?usage :IngredientUsageInMeal ?meal ;
+    		 :UsedIngredient ?ingredient .
+    ?ingredient :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intolerant .
+  }
+}
+
+
+# Retrieve Calorie-Conscious and Vegetarian Meals
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?meal (SUM(?calories) AS ?totalCalories)
+WHERE {
+  ?meal rdf:type :Meal .
+  ?usage :IngredientUsageInMeal ?meal ;
+         :UsedIngredient ?ingredient ;
+         :IngredientUsageInGrams ?quantity .
+  
+  ?ingredient :IngredientHasCalories ?caloriesPer100Grams .
+  
+  BIND((?caloriesPer100Grams / 100.0) * ?quantity AS ?calories)
+  
+  FILTER NOT EXISTS {
+    ?nonVegUsage :IngredientUsageInMeal ?meal ;
+     			 :UsedIngredient ?nonVegIngredient .
+    ?nonVegIngredient :IngredientNotCompatibleWithFoodTypePreference :Vegetarian .
+  }
+}
+GROUP BY ?meal
+HAVING (SUM(?calories) <= 550)
+
+
+# Retrieve Gluten and Lactose Free Meals
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?meal
+WHERE {
+  ?meal rdf:type :Meal .
+  FILTER NOT EXISTS {
+    ?usage :IngredientUsageInMeal ?meal ;
+    		 :UsedIngredient ?ingredient .
+    ?ingredient :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intolerant .
+  }
+    FILTER NOT EXISTS {
+    ?usage :IngredientUsageInMeal ?meal ;
+    		 :UsedIngredient ?ingredient .
+    ?ingredient :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intolerant .
+  }
+}
+
+
+# Insert Total Calories of Meal in the Ontology
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+
+INSERT {
+    ?meal :MealHasCalories ?totalCalories .
+}
+WHERE {
+    SELECT ?meal (SUM(?calories) AS ?totalCalories)
+	WHERE {
+        ?usage :IngredientUsageInMeal ?meal ;
+               :UsedIngredient ?ingredient ;
+               :IngredientUsageInGrams ?quantity .
+
+        ?ingredient :IngredientHasCalories ?caloriesPer100Grams .
+
+        BIND((?caloriesPer100Grams / 100.0) * ?quantity AS ?calories)
+    }
+	GROUP BY ?meal
+}
+
+
+# Insert the Calorie_Conscious food preference in the ontology to the proper meals
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+
+INSERT {
+    ?meal :MealNotCompatibleWithFoodPreference :Calorie_Conscious .
+}
+WHERE {
+        SELECT ?meal (SUM(?calories) AS ?totalCalories)
+        WHERE {
+            ?usage :IngredientUsageInMeal ?meal ;
+                   :UsedIngredient ?ingredient ;
+                   :IngredientUsageInGrams ?quantity .
+
+            ?ingredient :IngredientHasCalories ?caloriesPer100Grams .
+
+            BIND((?caloriesPer100Grams / 100.0) * ?quantity AS ?calories)
+        }
+        GROUP BY ?meal
+        HAVING (?totalCalories >= 550)
+}

@@ -1,0 +1,95 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+# Shape for Guest
+:GuestShape a sh:NodeShape ;
+    sh:targetClass :Guest ;
+    sh:property [
+        sh:path :GuestHasFoodType ;
+        sh:class :GuestFoodPreference ;
+    ] ;
+    sh:property :ObjectHasNameShape .
+    
+
+# Shape for GuestFoodPreference
+:GuestFoodPreferenceShape a sh:NodeShape ;
+    sh:targetClass :GuestFoodPreference .
+
+
+# Shape for GuestCaloricPreference
+:GuestCaloricPreferenceShape a sh:NodeShape ;
+    sh:targetClass :GuestCaloricPreference .
+
+
+# Shape for GuestFoodTypePreference
+:GuestFoodTypePreferenceShape a sh:NodeShape ;
+    sh:targetClass :GuestFoodTypePreference .
+
+
+# Shape for Ingredient
+:IngredientShape a sh:NodeShape ;
+    sh:targetClass :Ingredient ;
+    sh:property [
+        sh:path :IngredientHasCalories ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :IngredientNotCompatibleWithFoodTypePreference ;
+        sh:class :GuestFoodTypePreference ;
+    ] ;
+    sh:property :ObjectHasNameShape .
+
+# Shape for IngredientUsage
+:IngredientUsageShape a sh:NodeShape ;
+    sh:targetClass :IngredientUsage ;
+    sh:property [
+        sh:path :UsedIngredient ;
+        sh:class :Ingredient ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :IngredientUsageInGrams ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path :IngredientUsageInMeal ;
+        sh:class :Meal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+# Shape for Meal
+:MealShape a sh:NodeShape ;
+    sh:targetClass :Meal ;
+    sh:property [
+        sh:path :MealNotCompatibleWithFoodPreference ;
+        sh:class :GuestFoodPreference ;
+    ] ;
+    sh:property [
+        sh:path :MealHasCalories ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property :ObjectHasNameShape .
+
+    
+# Shape for ObjectHasName data property
+:ObjectHasNameShape a sh:PropertyShape ;
+    sh:path :ObjectHasName ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:minLength 1 ;
+    sh:maxLength 30 .

@@ -1,0 +1,17 @@
+# Rule that checks if a meal if not compatible with the Gluten_Intollerant food preference
+IngredientUsageInMeal(?ingredientUsage, ?meal) ^ 
+UsedIngredient(?ingredientUsage, ?ingredient) ^ 
+IngredientNotCompatibleWithFoodTypePreference(?ingredient, Gluten_Intolerant) -> 
+MealNotCompatibleWithFoodPreference(?meal, Gluten_Intolerant)
+
+# Rule that checks if a meal if not compatible with the Lactose_Intollerant food preference
+IngredientUsageInMeal(?ingredientUsage, ?meal) ^ 
+UsedIngredient(?ingredientUsage, ?ingredient) ^ 
+IngredientNotCompatibleWithFoodTypePreference(?ingredient, Lactose_Intolerant) -> 
+MealNotCompatibleWithFoodPreference(?meal, Lactose_Intolerant)
+
+# Rule that checks if a meal if not compatible with the Vegetarian food preference
+IngredientUsageInMeal(?ingredientUsage, ?meal) ^ 
+UsedIngredient(?ingredientUsage, ?ingredient) ^ 
+IngredientNotCompatibleWithFoodTypePreference(?ingredient, Vegetarian) -> 
+MealNotCompatibleWithFoodPreference(?meal, Vegetarian)
