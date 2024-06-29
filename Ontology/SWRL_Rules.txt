@@ -15,3 +15,14 @@ IngredientUsageInMeal(?ingredientUsage, ?meal) ^
 UsedIngredient(?ingredientUsage, ?ingredient) ^ 
 IngredientNotCompatibleWithFoodTypePreference(?ingredient, Vegetarian) -> 
 MealNotCompatibleWithFoodPreference(?meal, Vegetarian)
+
+#Rule to calculate the total calories of a meal, it does not work
+IngredientUsageInMeal(?ingredientUsage, ?meal) ^ 
+UsedIngredient(?ingredientUsage, ?ingredient) ^ 
+IngredientHasCalories(?ingredient, ?caloriesPer100Grams) ^ 
+IngredientUsageInGrams(?ingredientUsage, ?gramsUsed) ^ 
+swrlb:divide(?caloriesPerGram, ?caloriesPer100Grams, 100) ^ 
+swrlb:multiply(?calories, ?caloriesPerGram, ?gramsUsed) ^ 
+swrlb:add(?totalCalories, ?calories) -> 
+MealHasCalories(?meal, ?totalCalories)
+
