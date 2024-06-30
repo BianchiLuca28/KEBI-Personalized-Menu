@@ -1,0 +1,68 @@
+#Query that checks for all the preferences of the guest
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mod: <http://fhnw.ch/modelingEnvironment/ModelOntology#>
+PREFIX lo: <http://fhnw.ch/modelingEnvironment/LanguageOntology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?meal
+WHERE {
+  {
+    SELECT ?isVegetarian ?isLactoseIntolerant ?isGlutenIntolerant ?isCalorieConscious WHERE {
+      mod:SuggestMeals_ed7addcf-be90-4989-8f10-6714387bfe7a lo:Vegetarian ?vegetarianObj .
+      mod:SuggestMeals_ed7addcf-be90-4989-8f10-6714387bfe7a lo:Lactose_Intolerant ?lactoseObj .
+      mod:SuggestMeals_ed7addcf-be90-4989-8f10-6714387bfe7a lo:Gluten_Intolerant ?glutenObj .
+      mod:SuggestMeals_ed7addcf-be90-4989-8f10-6714387bfe7a lo:Calorie_Conscious ?calorieObj .
+      BIND(xsd:boolean(?vegetarianObj) AS ?isVegetarian)
+      BIND(xsd:boolean(?lactoseObj) AS ?isLactoseIntolerant)
+      BIND(xsd:boolean(?glutenObj) AS ?isGlutenIntolerant)
+      BIND(xsd:boolean(?calorieObj) AS ?isCalorieConscious)
+    }
+  }
+
+  ?meal rdf:type :Meal .
+
+  FILTER(
+    (?isVegetarian = false || NOT EXISTS {
+      ?usage :IngredientUsageInMeal ?meal ;
+             :UsedIngredient ?ingredient .
+      ?ingredient :IngredientNotCompatibleWithFoodTypePreference :Vegetarian .
+    }) &&
+    (?isLactoseIntolerant = false || NOT EXISTS {
+      ?usage :IngredientUsageInMeal ?meal ;
+             :UsedIngredient ?ingredient .
+      ?ingredient :IngredientNotCompatibleWithFoodTypePreference :Lactose_Intolerant .
+    }) &&
+    (?isGlutenIntolerant = false || NOT EXISTS {
+      ?usage :IngredientUsageInMeal ?meal ;
+             :UsedIngredient ?ingredient .
+      ?ingredient :IngredientNotCompatibleWithFoodTypePreference :Gluten_Intolerant .
+    })
+  )
+
+  FILTER(
+    (?isCalorieConscious = false || EXISTS {
+      SELECT ?meal (SUM(?calories) AS ?totalCalories)
+      WHERE {
+        ?usage :IngredientUsageInMeal ?meal ;
+                :UsedIngredient ?ingredient ;
+                :IngredientUsageInGrams ?quantity .
+        
+        ?ingredient :IngredientHasCalories ?caloriesPer100Grams .
+        
+        BIND((?caloriesPer100Grams / 100.0) * ?quantity AS ?calories)
+      }
+      GROUP BY ?meal
+      HAVING (SUM(?calories) <= 550)
+    })
+  )
+
+  FILTER(
+    ?isVegetarian = true || 
+    ?isLactoseIntolerant = true || 
+    ?isGlutenIntolerant = true || 
+    ?isCalorieConscious = true ||
+    (!?isVegetarian && !?isLactoseIntolerant && !?isGlutenIntolerant && !?isCalorieConscious)
+  )
+}

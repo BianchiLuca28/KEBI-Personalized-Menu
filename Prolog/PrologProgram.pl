@@ -164,7 +164,8 @@ meal_compliant_with_preferences(Meal, [Preference | Rest]) :-
     meal_compliant_with_preferences(Meal, Rest).
 
 % Collect meals that are compliant with all given preferences
-collect_meals([], []) :- !.
+collect_meals([], Meals) :-
+    findall(Meal, meal(Meal, _), Meals), !.
 collect_meals(Preferences, Meals) :-
     findall(Meal, (meal(Meal, _), meal_compliant_with_preferences(Meal, Preferences)), Meals).    
 
