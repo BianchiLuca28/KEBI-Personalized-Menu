@@ -174,3 +174,14 @@ WHERE {
         GROUP BY ?meal
         HAVING (?totalCalories >= 550)
 }
+
+# Returns the meals which have food preferences and their calories
+PREFIX : <http://www.semanticweb.org/utente/ontologies/2024/5/project_ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?meal ?preference ?calories
+WHERE {
+    ?meal rdf:type :Meal ;
+    	  :MealNotCompatibleWithFoodPreference ?preference;
+    	  :MealHasCalories ?calories.
+}

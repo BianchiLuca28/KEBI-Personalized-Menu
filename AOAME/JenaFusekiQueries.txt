@@ -10,10 +10,10 @@ SELECT DISTINCT ?meal
 WHERE {
   {
     SELECT ?isVegetarian ?isLactoseIntolerant ?isGlutenIntolerant ?isCalorieConscious WHERE {
-      mod:SuggestMeals_ed7addcf-be90-4989-8f10-6714387bfe7a lo:Vegetarian ?vegetarianObj .
-      mod:SuggestMeals_ed7addcf-be90-4989-8f10-6714387bfe7a lo:Lactose_Intolerant ?lactoseObj .
-      mod:SuggestMeals_ed7addcf-be90-4989-8f10-6714387bfe7a lo:Gluten_Intolerant ?glutenObj .
-      mod:SuggestMeals_ed7addcf-be90-4989-8f10-6714387bfe7a lo:Calorie_Conscious ?calorieObj .
+      mod:SuggestMeals_f8d5a1e9-c95f-4994-9f1b-e33a686311de lo:Vegetarian ?vegetarianObj .
+      mod:SuggestMeals_f8d5a1e9-c95f-4994-9f1b-e33a686311de lo:Lactose_Intolerant ?lactoseObj .
+      mod:SuggestMeals_f8d5a1e9-c95f-4994-9f1b-e33a686311de lo:Gluten_Intolerant ?glutenObj .
+      mod:SuggestMeals_f8d5a1e9-c95f-4994-9f1b-e33a686311de lo:Calorie_Conscious ?calorieObj .
       BIND(xsd:boolean(?vegetarianObj) AS ?isVegetarian)
       BIND(xsd:boolean(?lactoseObj) AS ?isLactoseIntolerant)
       BIND(xsd:boolean(?glutenObj) AS ?isGlutenIntolerant)
@@ -56,13 +56,5 @@ WHERE {
       GROUP BY ?meal
       HAVING (SUM(?calories) <= 550)
     })
-  )
-
-  FILTER(
-    ?isVegetarian = true || 
-    ?isLactoseIntolerant = true || 
-    ?isGlutenIntolerant = true || 
-    ?isCalorieConscious = true ||
-    (!?isVegetarian && !?isLactoseIntolerant && !?isGlutenIntolerant && !?isCalorieConscious)
   )
 }
